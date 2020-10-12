@@ -1,9 +1,3 @@
-LONGEST_KEY = 1
-
-PAUSE_COMMAND = "{p}"
-SPACE_COMMAND = "{i}"
-VOWELS = ("a", "á", "e", "é", "i", "í", "o", "ó", "u", "ú")
-
 lastValue = ""
 
 def reverseSearch(dictionary, indexedKey):
@@ -24,13 +18,7 @@ def reverseSearch(dictionary, indexedKey):
 				searchKey = key[len(searchKey):]
 	return value
 
-def isInitial(text=lastValue):
-	if lastValue == "" or SPACE_COMMAND in lastValue or lastValue.endswith(" "):
+def markedAsInitial():
+	if lastValue.endswith("{i}"):
 		return True
 	return False
-
-def removeCommands(text):
-	return text.replace(PAUSE_COMMAND, "").replace(SPACE_COMMAND, "")
-
-def lookup(key):
-	return " "
