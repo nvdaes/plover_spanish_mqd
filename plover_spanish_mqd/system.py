@@ -188,5 +188,5 @@ KEYMAPS = {
     },
 }
 
-DICTIONARIES_ROOT = 'asset:plover_spanish_mqd:dictionaries'
-DEFAULT_DICTIONARIES = ('spanish_mqd_single.py', 'spanish_mqd_double.py', 'user.json')
+DICTIONARIES_ROOT = 'asset:plover_osnos:dictionaries'
+DEFAULT_DICTIONARIES = ('spanish_mqd_single.py', 'user.json')

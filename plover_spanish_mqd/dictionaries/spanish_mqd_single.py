@@ -1,53 +1,40 @@
-import os
-import sys
-sys.path.append(os.path.dirname(__file__))
-import spanish_mqd_common
-del sys.path[-1]
-
 LONGEST_KEY = 1
 
-numbers = {
-	"S": "1",
-	"P": "2",
-	"T": "3",
-	"V": "4",
-	"I": "5",
-	"O": "0",
-	"c": "6",
-	"t": "7",
-	"p": "8",
-	"i": "9"
-}
-
 dict = {
-	"SC": ("casa ", "ca", True),
-	"N": ("nana ", "n", False)
+	"SC": ("casa", "ca", False),
+	"N": ("nana", "n", False),
+	"Ccn": ("camina{p}", "camin", False)
 }
 
+lastValue = ""
 
 def lookup(key):
+	global lastValue
 	value = ""
-	# Numbers
-	if "#" in key[0]:
-		for k in key[0]:
-			if k in ("A", "#"):
-				continue
-			numberValue = numbers.get(k)
-			if numberValue is None:
-				break
-			value += numberValue
-		if value != "" and "A" in key[0]:
-			if len(value) > 1:
-				value = value[::-1]
-			else:
-				value = "{firstDigit}{secondDigit}".format(firstDigit=value, secondDigit=value)
-	if value == "" and dict.get(key[0]) is not None:
-		if spanish_mqd_common.lastValue == "" or spanish_mqd_common.lastValue.endswith(" ") or spanish_mqd_common.markedAsInitial() or not dict.get(key[0])[2]:
+	if "{p}" in lastValue:
+        value = lastValue.replace(""{p", "")
+	if dict.get(key[0]) is not None:
+
 			value = dict.get(key[0])[0] 
 		if value == "":
-			value = spanish_mqd_common.reverseSearch(dict, key[0])
-	spanish_mqd_common.lastValue = value
-	value.replace("{i}", "")
-	if value.endswith(" "):
-		return value
-	return value + "{^}"
+			value = dict.get(key[0])[1]
+	if value == "":
+		searchKey = key[0][:]
+		searchKeyValue = ""
+		lenSearched = 0
+		while len(searchKey) > 0:
+			if dict.get(searchKey) is not None:
+				searchKeyValue = dict.get(searchKey)[1]
+			if searchKeyValue == "":
+				searchKey = searchKey[:len(searchKey)-1]
+			else:
+				value += searchKeyValue
+				searchKeyValue = ""
+				lenSearched += len(searchKey)
+				searchKey = key[0][lenSearched:]
+	if "{p}" in value:
+		value.replace("{p}", "")
+		lastValue = value
+		return " "
+	lastValue = value
+	return value
