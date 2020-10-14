@@ -35,8 +35,8 @@ def searchKey(dictionary, stroke):
 			searchKeyValue = ""
 			lenSearched += len(searchKey)
 			searchKey = stroke[lenSearched:]
-	if len(searchKey) == 0:
-		return " "
+	if value == "":
+		value = "{empty}"
 	return value
 
 def lookup(key):
