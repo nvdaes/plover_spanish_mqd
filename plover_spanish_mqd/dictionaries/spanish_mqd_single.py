@@ -16,6 +16,7 @@ numbers = {
 dict = {
 	"SC": ("casa ", "ca", True),
 	"N": ("nana", "n", False),
+	"*": ("{#control(BackSpace)} ", "{empty}", False)
 }
 
 lastValue = ""
