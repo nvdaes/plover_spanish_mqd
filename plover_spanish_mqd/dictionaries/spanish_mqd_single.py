@@ -15,7 +15,7 @@ numbers = {
 
 dict = {
 	"*": ("{#control(BackSpace)} ", "", False)
-}
+ }
 
 lastValue = ""
 
