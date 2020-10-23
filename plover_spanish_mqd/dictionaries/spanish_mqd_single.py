@@ -600,6 +600,7 @@ dict = {
 	"CNAsne*": ("Chávez ", "", False),
 	"CNAsnreo*": ("", "cionamos ", False),
 	"CNAstnia*": ("Chavarría ", "", True),
+	"CNc": ("", "chic", False),
 	"CNc*": ("conóz", "", False),
 	"CNca": ("conozca ", "", True),
 	"CNca*": ("ciencia ", "", False),
@@ -2743,7 +2744,7 @@ dict = {
 	"CTNVo": ("tengo ", "tuvo ", False),
 	"CTNVO*": ("túvo", "", False),
 	"CTNVpie": ("", "tenimientos ", False),
-	"CTNVR": ("forma", "form", False),
+	"CTNVR": ("", "form", False),
 	"CTNVr": ("tener ", "tenedor", False),
 	"CTNVRa*": ("formal ", "", False),
 	"CTNVRAsnra*": ("FAMMA ", "", False),
@@ -4662,7 +4663,7 @@ dict = {
 	"NVa": ("intervenga ", "", False),
 	"NVAeo*": ("intervengáis ", "", False),
 	"NVAstno*": ("Navarro ", "", False),
-	"NVc": ("involucra", "involucr", False),
+	"NVc": ("", "involucr", False),
 	"NVc*": ("involú", "", False),
 	"NVceo": ("involucres ", "", False),
 	"NVcie": ("involucración ", "", False),
@@ -8093,7 +8094,7 @@ dict = {
 	"PTct*": ("acép", "", False),
 	"PTcteo": ("aceptes ", "", False),
 	"PTctie": ("aceptación ", "acepción ", False),
-	"PTctnp": ("patenta", "patent", False),
+	"PTctnp": ("", "patent", False),
 	"PTctnp*": ("patén", "", False),
 	"PTctnpeo": ("patentes ", "", False),
 	"PTctnpie": ("patentemente ", "", False),
@@ -8119,7 +8120,7 @@ dict = {
 	"Ptnao": ("Postdam ", "El puente de Postdam ", False),
 	"PTNAstna*": ("de la Parra ", "", False),
 	"PTNAtna*": ("de Prada ", "", False),
-	"PTNc": ("pertene", "pertenec", False),
+	"PTNc": ("", "pertenec", False),
 	"PTNc*": ("pertenéz", "", False),
 	"PTNca": ("pertenezca ", "pertenencia ", False),
 	"PTNceo": ("perteneces ", "", False),
@@ -8351,7 +8352,7 @@ dict = {
 	"PTNVRAseo*": ("Blas ", "", True),
 	"PTNVRAsne*": ("Blázquez ", "", False),
 	"PTNVRAstno*": ("del Barrio ", "", True),
-	"PTNVRc": ("estable", "establezc", False),
+	"PTNVRc": ("", "establezc", False),
 	"PTNVRc*": ("establéz", "", False),
 	"PTNVRce": ("establece ", "Blanca Cegarra ", False),
 	"PTNVRceo": ("estableces ", "", False),
@@ -11774,7 +11775,7 @@ dict = {
 	"SPCnr*": ("Gestión Social ", "", False),
 	"SPcnra": ("inspectora ", "espectacular ", False),
 	"SPCnra*": ("gestoría ", "", False),
-	"SPCNRc": ("permane", "permanezc", False),
+	"SPCNRc": ("", "permanezc", False),
 	"SPCNRc*": ("permanéz", "", False),
 	"SPCNRce": ("permanece ", "", False),
 	"SPCNRceo": ("permaneces ", "", False),
@@ -12316,7 +12317,7 @@ dict = {
 	"SPCTNVA": ("", "distribuya", False),
 	"SPCTNVA*": ("distribuyá", "", False),
 	"SPCTNVAeo*": ("distribuyáis ", "", False),
-	"SPCTNVc": ("empobre", "empobrec", False),
+	"SPCTNVc": ("", "empobrec", False),
 	"SPCTNVc*": ("empobréz", "", False),
 	"SPCTNVca": ("empobrezca ", "pobreza ", False),
 	"SPCTNVce*": ("pobre ", "", False),
@@ -14066,7 +14067,7 @@ dict = {
 	"STNRcstnr": ("liquidez ", "líquid", False),
 	"STNRcstnre*": ("liquidaciones ", "", False),
 	"STNRcstnreo": ("líquidos ", "liquidación ", False),
-	"STNRctn": ("tradu", "traduzc", False),
+	"STNRctn": ("", "traduzc", False),
 	"STNRctn*": ("tradú", "", False),
 	"STNRctne": ("traduce ", "", False),
 	"STNRctneo": ("traduces ", "", False),
@@ -14530,7 +14531,7 @@ dict = {
 	"STVcteo": ("intensifiques ", "", False),
 	"STVctia*": ("intensidades ", "", False),
 	"STVctie": ("intensificación ", "", False),
-	"STVctn": ("indu", "induzc", False),
+	"STVctn": ("", "induzc", False),
 	"STVctn*": ("indú", "", False),
 	"STVctne": ("induce ", "", False),
 	"STVctneo": ("induces ", "", False),
@@ -16793,7 +16794,7 @@ dict = {
 	"TVRAsne*": ("Frank Zenker ", "", False),
 	"TVRAsnra*": ("Francisco Martín ", "", False),
 	"TVRAtne*": ("Frade ", "", True),
-	"TVRc": ("favore", "favorec", False),
+	"TVRc": ("", "favorec", False),
 	"TVRc*": ("favoréz", "", False),
 	"TVRca": ("favorezca ", "frica ", True),
 	"TVRce*": ("favores ", "", False),
@@ -17070,7 +17071,7 @@ dict = {
 	"VAtna*": ("Valmaseda ", "", False),
 	"VAtne*": ("Valverde ", "", True),
 	"VAtni*": ("Valentín ", "", True),
-	"Vc": ("voca", "vida cotidiana ", False),
+	"Vc": ("", "vida cotidiana ", False),
 	"Vca": ("voca ", "vica ", True),
 	"Vca*": ("vocacional ", "", False),
 	"Vcao*": ("Vladimir Cuk ", "", False),
@@ -17490,14 +17491,14 @@ def lookup(key):
 			else:
 				value = "{firstDigit}{secondDigit}".format(firstDigit=value, secondDigit=value)
 	if dict.get(key[0]) is not None:
-		if lastValue == "" or lastValue.endswith("{i}") or lastValue[-1] == " " or not dict.get(key[0])[2]:
+		if dict.get(key[0])[2] and lastValue.endswith(" "):
+			return lastValue
 			value = dict.get(key[0])[0] 
 		if value == "":
 			value = dict.get(key[0])[1] 
 	if value == "":
 		value = searchKey(dict, key[0])
-	lastValue = value
-	value = value.replace("{i}", "")
 	if value.endswith(" "):
 		return value
 	return value + "{^}"
+
