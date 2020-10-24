@@ -17491,13 +17491,10 @@ def lookup(key):
 			else:
 				value = "{firstDigit}{secondDigit}".format(firstDigit=value, secondDigit=value)
 	if dict.get(key[0]) is not None:
-		if dict.get(key[0])[2] and lastValue.endswith(" "):
-			return lastValue
-			value = dict.get(key[0])[0] 
-		if value == "":
-			value = dict.get(key[0])[1] 
+		value = dict.get(key[0])[0] 
 	if value == "":
 		value = searchKey(dict, key[0])
+	lastValue = value
 	if value.endswith(" "):
 		return value
 	return value + "{^}"
