@@ -17495,7 +17495,7 @@ def lookup(key):
 				value = "{firstDigit}{secondDigit}".format(firstDigit=value, secondDigit=value)
 	if dict.get(key[0]) is not None:
 		shouldBeInitial = dict.get(key[0])[2]
-		if (not shouldBeInitial) or (initial and shouldBeInitial):
+		if (initial) or not (shouldBeInitial and not initial):
 			value = dict.get(key[0])[0] 
 	if value == "":
 		value = dict.get(key[0])[1] 
