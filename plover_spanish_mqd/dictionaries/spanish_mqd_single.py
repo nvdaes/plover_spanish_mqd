@@ -17476,9 +17476,7 @@ def searchKey(dictionary, stroke):
 	return value
 
 def lookup(key):
-	global lastValue, initial
 	value = ""
-	shouldBeInitial = False
 	# Numbers
 	if "#" in key[0]:
 		for k in key[0]:
@@ -17494,17 +17492,10 @@ def lookup(key):
 			else:
 				value = "{firstDigit}{secondDigit}".format(firstDigit=value, secondDigit=value)
 	if dict.get(key[0]) is not None:
-		shouldBeInitial = dict.get(key[0])[2]
-		if (initial) or not (shouldBeInitial and not initial):
-			value = dict.get(key[0])[0] 
-	if value == "":
-		value = dict.get(key[0])[1] 
+		value = dict.get(key[0])[0] 
 	if value == "":
 		value = searchKey(dict, key[0])
-	lastValue = value
 	if value.endswith(" "):
-		initial = True
 		return value
-	initial = False
 	return value + "{^}"
 

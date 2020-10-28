@@ -24,6 +24,7 @@ setup(
 	install_requires = [
 		'plover>=4.0.0.dev0',
 		'plover-python-dictionary>=0.5.9',
+		'plover-start-words>=0.5.9',
 	],
 	packages = [
 		'plover_spanish_mqd',
