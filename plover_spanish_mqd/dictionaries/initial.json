@@ -1,3 +1,4 @@
 {
-	"CNRca": "{:initial:mucha | mica}"
+	"CNRca": "{:initial:mucha | mica}",
+	"CNRr": "{MODE_RESET_CASE}{^\n^}{-|}"
 }
