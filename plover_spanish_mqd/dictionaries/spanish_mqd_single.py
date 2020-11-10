@@ -1,4 +1,6 @@
 LONGEST_KEY = 1
+lastValue = ""
+
 numbers = {
 	"S": "1",
 	"P": "2",
@@ -11,9 +13,9 @@ numbers = {
 	"p": "8",
 	"i": "9"
 }
+
 dict = {
 	"*": ("{#control(BackSpace)} ", ""),
-	"ceo": ("cantos ", ""),
 	"*#": ("{^}*", ""),
 	"A": ("", "a"),
 	"a": ("", "a "),
@@ -15569,7 +15571,7 @@ dict = {
 	"Vtpi*": ("Victoria Figueredo ", ""),
 	"Vtpo": ("Voces ", "Fundación Voces ")
 }
-lastValue = ""
+
 
 def searchKey(dictionary, stroke):
 	searchKey = stroke[:]
