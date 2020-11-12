@@ -1,8 +1,9 @@
 name: Python package
 
-on: [push]
-  tags-ignore:
-    - '*'
+on:
+  push:
+    tags-ignore:
+      '*'
 
 jobs:
   build:
