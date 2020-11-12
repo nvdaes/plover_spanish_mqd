@@ -3317,7 +3317,7 @@ dict = {
 	"NEtni*": ("Enrique Díaz ", ""),
 	"Ni": ("ni ", ""),
 	"nia": ("unas ", ""),
-		"NIAEOct*": ("99", ""),
+	"NIAEOct*": ("99", ""),
 	"NIAEOcte*": ("9", ""),
 	"NIAOce*": ("Nuance ", ""),
 	"NIcsp*": ("Nick ", ""),
@@ -4221,7 +4221,7 @@ dict = {
 	"Oto*": ("Oto ", ""),
 	"Otra*": ("Oltra ", ""),
 	"P": ("por ", "p"),
-		"p*": ("{^}.", ""),
+	"p*": ("{^}.", ""),
 	"p*#": ("{^}... ", ""),
 	"PAa*": ("Pagazaurtundúa ", ""),
 	"PAao*": ("PAU ", ""),
@@ -4249,7 +4249,7 @@ dict = {
 	"Paz ": ("", ""),
 	"PC": ("Gibraltar ", "g"),
 	"Pc": ("Palabra Complementada ", "pic"),
-		"Pc*": ("Pablo Casado ", ""),
+	"Pc*": ("Pablo Casado ", ""),
 	"Pca*": ("poquísima ", ""),
 	"PCAca*": ("Garnica ", ""),
 	"PCAcia*": ("García ", ""),
@@ -8160,7 +8160,7 @@ dict = {
 	"REtnpe*": ("Renfe ", ""),
 	"Ria": ("eras ", "áreas "),
 	"ria": ("otras " ""),
-		"RIAa*": ("Ricardo Aguado ", ""),
+	"RIAa*": ("Ricardo Aguado ", ""),
 	"RIAEOsta*": ("Ruesta ", ""),
 	"RIAEOtna*": ("Rueda ", ""),
 	"RIAEOtni*": ("Ruedi ", ""),
@@ -8577,7 +8577,8 @@ dict = {
 	"SCNRcr*": ("Ministerio de Sanidad, Consumo y Bienestar Social ", ""),
 	"SCNRcreo": ("manuscritos ", ""),
 	"SCNRcrs*": ("Ministerio de Asuntos Económicos y Transformación Digital ", ""),
-	"SCNRcs": ("Ministro de Agricultura, Alimentación y Medio Ambiente ", "Ministerio de Agricultura, Alimentación y Medio Ambiente "),
+	"SCNRcs": ("Ministro de Agricultura, Alimentación y Medio Ambiente ", ""),
+	"SCNRcs*": (""Ministerio de Agricultura, Alimentación y Medio Ambiente ", ""),
 	"SCNRcse*": ("Yves Saint Geours ", ""),
 	"SCNRcsn": ("", "margin"),
 	"SCNRcsn*": ("margí", ""),
@@ -9448,7 +9449,6 @@ dict = {
 	"SCTNVRnr": ("informar ", "informador"),
 	"SCTNVRnr*": ("Ley de Información No Financiera y Diversidad ", ""),
 	"SCTNVRnra*": ("informal ", ""),
-	"SCTNVRnrao": ("Transparencia, Información Pública y Buen Gobierno ", "Ley de Transparencia, Información Pública y Buen Gobierno "),
 	"SCTNVRnre": ("informadores ", ""),
 	"SCTNVRnria*": ("informales ", ""),
 	"SCTNVRnrie": ("informarse ", "informalmente "),
@@ -9830,7 +9830,7 @@ dict = {
 	"SNRcstnrie": ("señalarse ", ""),
 	"SNRct": ("", "elev"),
 	"SNRct*": ("elé", ""),
-	"SNRctao": ("Salamanca ", Universidad de Salamanca "),
+	"SNRctao": ("Salamanca ", "Universidad de Salamanca "),
 	"SNRcteo": ("eleves ", ""),
 	"SNRctie": ("elevación ", ""),
 	"SNRctn": ("", "asimil"),
@@ -11432,7 +11432,7 @@ dict = {
 	"SPTcstp*": ("Zona Burgos-Soria ", ""),
 	"SPTct": ("expec", "expectativ"),
 	"SPTct*": ("Zamora Viva ", ""),
-	"SPTctao": ("Zaragoza ", "Universidad de Zaragoza "),	
+	"SPTctao": ("Zaragoza ", "Universidad de Zaragoza "),
 	"SPTctnr": ("Venezuela ", "venezolan"),
 	"SPTctnreo": ("venezolanos ", ""),
 	"SPTe*": ("Zeta Emilianidou ", ""),
@@ -13751,7 +13751,7 @@ dict = {
 	"TNse": ("de ese ", ""),
 	"TNseo": ("", "dísimos "),
 	"TNsi": ("de si ", "de sí "),
-		"TNsie": ("descubrimiento ", ""),
+	"TNsie": ("descubrimiento ", ""),
 	"TNsn": ("tenacidad ", "tenaz"),
 	"TNsn*": ("David Zanoletty ", ""),
 	"TNsna*": ("de Souza ", ""),
@@ -14324,7 +14324,7 @@ dict = {
 	"Tr": ("", "autor"),
 	"tr#": ("¿", ""),
 	"Tr*": ("Tali Ravid ", ""),
-		"Tra*": ("autoría ", ""),
+	"Tra*": ("autoría ", ""),
 	"TRAia": ("atra", "atrá"),
 	"Trao*": ("Távora ", ""),
 	"TRc*": ("Termas de Cuntis ", ""),
@@ -15417,7 +15417,7 @@ def searchKey(dictionary, stroke):
 		if dictionary.get(searchKey) is not None:
 			searchKeyValue = dictionary.get(searchKey)[1]
 		if searchKeyValue == "":
-			searchKey = searchKey[:len(searchKey)-1]
+	searchKey = searchKey[:len(searchKey) -1]
 		else:
 			value += searchKeyValue
 			searchKeyValue = ""
@@ -15426,6 +15426,7 @@ def searchKey(dictionary, stroke):
 	if value == "":
 		value = "{empty}"
 	return value
+
 
 def lookup(key):
 	value = ""
@@ -15444,7 +15445,7 @@ def lookup(key):
 			else:
 				value = "{firstDigit}{secondDigit}".format(firstDigit=value, secondDigit=value)
 	if dict.get(key[0]) is not None:
-		value = dict.get(key[0])[0] 
+		value = dict.get(key[0])[0]
 	if value == "":
 		value = searchKey(dict, key[0])
 	if value.endswith(" "):
