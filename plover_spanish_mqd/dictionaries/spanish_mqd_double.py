@@ -747,6 +747,7 @@ doubleStrokes = {
 	"Vstn": "varia"
 }
 
+
 def lookup(key):
 	if doubleStrokes.get(key[0]) is None:
 		raise KeyError
@@ -764,7 +765,7 @@ def lookup(key):
 		value = spanish_mqd_single.lastValue + "zc" + value
 	else:
 		value = spanish_mqd_single.lastValue + value
-	if not value.endswith (" "):
-		value = value+ "{^}"
+	if not value.endswith(" "):
+		value = value + "{^}"
 	spanish_mqd_single.lastValue = value
 	return value
