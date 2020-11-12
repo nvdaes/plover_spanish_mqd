@@ -748,6 +748,11 @@ doubleStrokes = {
 }
 
 
+adjs = {
+	"respeta": "respetuo"
+}
+
+
 def lookup(key):
 	if doubleStrokes.get(key[0]) is None:
 		raise KeyError
@@ -760,6 +765,10 @@ def lookup(key):
 	if value == "":
 		value = spanish_mqd_single.searchKey(spanish_mqd_single.dict, key[1])
 	if spanish_mqd_single.lastValue.endswith("a") and value[0] in VOWELS:
+		value = spanish_mqd_single.lastValue[:-1] + value
+	elif spanish_mqd_single.lastValue.endswith("a") and value.startswith("s") and value[1] in ("a", "í", "o"):
+		if adjs.get(lastValue) is not None:
+			value = adjs.get(lastValue) + value
 		value = spanish_mqd_single.lastValue[:-1] + value
 	elif spanish_mqd_single.lastValue[-1] in ("e", "o") and value[0] == "a":
 		value = spanish_mqd_single.lastValue + "zc" + value
