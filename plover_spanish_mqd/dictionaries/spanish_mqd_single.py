@@ -276,7 +276,6 @@ dict = {
 	"CN": ("contra", "ch"),
 	"cn": ("Elche ", "ch"),
 	"Cn": ("con un ", "con un"),
-	"cn": ("", ""),
 	"CN*": ("Chile ", ""),
 	"Cn*": ("Canal de Navarra ", ""),
 	"CNAca*": ("Chanca ", ""),
@@ -1493,7 +1492,6 @@ dict = {
 	"Cstnr": ("considerar ", ""),
 	"Cstnr*": ("Comunidad Autónoma ", ""),
 	"cstnr*": ("equí", ""),
-	"cstnr*": ("EXOVITE ", ""),
 	"Cstnra": ("comunidad autónoma ", ""),
 	"Cstnre": ("Comisión del Mercado de las Telecomunicaciones ", "CMT "),
 	"Cstnria": ("comunidades autónomas ", ""),
@@ -5338,7 +5336,6 @@ dict = {
 	"PCTNRct*": ("José Luis Vargas ", ""),
 	"PCTNRctn*": ("Julia María Díaz Calvarro ", ""),
 	"PCTNRctp*": ("José Luis Borau ", ""),
-	"PCTNRctp*": ("", ""),
 	"PCTNRctpr*": ("Manuel Jesús Barón Ríos ", ""),
 	"PCTnre": ("concejales ", ""),
 	"PCTNRe*": ("José Luis Ezquerro ", ""),
@@ -8480,9 +8477,7 @@ dict = {
 	"SCnr": ("necesitar ", "necesari"),
 	"SCNr": ("asistir ", "escen"),
 	"SCNr*": ("teleasistencia ", ""),
-	"Scnr*": ("Santi Clemente ", ""),
 	"SCnr*": ("Necesidades Especiales ", ""),
-	"Scnr*": ("mart&clouds ", ""),
 	"SCNR*": ("S", ""),
 	"SCnra*": ("necesaria ", ""),
 	"SCNra*": ("escénica ", ""),
@@ -12108,8 +12103,6 @@ dict = {
 	"Sseo*": ("sin ésos ", ""),
 	"Ssi*": ("OISS ", ""),
 	"Ssia*": ("sin ésas ", ""),
-	"Ssn*": ("Sr. Zahradil ", ""),
-	"Ssn*": ("Sr: Zahradil ", ""),
 	"Ssnp": ("escasez ", "escas"),
 	"Ssnpeo": ("escasos ", ""),
 	"Ssnpie": ("escasamente ", ""),
@@ -15375,7 +15368,7 @@ def searchKey(dictionary, stroke):
 		if dictionary.get(searchKey) is not None:
 			searchKeyValue = dictionary.get(searchKey)[1]
 		if searchKeyValue == "":
-			searchKey = searchKey[:len(searchKey) -1]
+			searchKey = searchKey[:len(searchKey) - 1]
 		else:
 			value += searchKeyValue
 			searchKeyValue = ""
