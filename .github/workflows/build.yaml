@@ -3,7 +3,7 @@ name: Python package
 on:
   push:
     tags-ignore:
-      - '*'
+      - v*
 
 jobs:
   build:
