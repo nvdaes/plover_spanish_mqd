@@ -2,8 +2,8 @@ name: Python package
 
 on:
   push:
-    tags-ignore:
-      '*'
+    branches:
+      - main
 
 jobs:
   build:
