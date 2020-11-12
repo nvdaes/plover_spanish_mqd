@@ -1,6 +1,11 @@
 name: Python package
-
-on: push
+on:
+  push:
+    tags-ignore:
+      - '*'
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build:
