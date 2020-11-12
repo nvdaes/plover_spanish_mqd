@@ -15609,7 +15609,7 @@ def lookup(key):
 			else:
 				value = "{firstDigit}{secondDigit}".format(firstDigit=value, secondDigit=value)
 	if dict.get(key[0]) is not None:
-		value = dict.get(key[0])[0] 
+		value = dict.get(key[0])[0]
 	if value == "":
 		value = searchKey(dict, key[0])
 	if value.endswith(" "):
