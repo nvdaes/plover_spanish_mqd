@@ -1,18 +1,18 @@
-# Spanish support for Plover #
+Spanish support for Plover
+##########################
 
 *	Authors: Sonsoles García Martín, Noelia Ruiz Martínez
 
 Plover support for Melani system in Spanish, used at MQD.
 
-Based on this [template](https://github.com/benoit-pierre/plover_template_system).
+Based on this `template <https://github.com/benoit-pierre/plover_template_system>`_
 
-## API ##
+API
+***
 
-API can be manipulated via [Python dictionaries](https://github.com/benoit-pierre/plover_python_dictionary).
+API can be manipulated via `Python dictionaries <https://github.com/benoit-pierre/plover_python_dictionary>`_
 
 For example:
-
-```
 
 # single.py
 from plover_spanish_mqd.dictionaries import spanish_mqd_single
@@ -33,9 +33,7 @@ spanish_mqd_single.dict = dict
 def lookup(key):
 	return spanish_mqd_single.lookup(key)
 
+Versioning
+**********
 
-```
-
-## Versioning ##
-
-We use [SemVer](https://semver.org/).
+We use `SemVer <https://semver.org/>`_
