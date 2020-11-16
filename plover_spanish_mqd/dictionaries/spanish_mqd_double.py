@@ -749,7 +749,24 @@ doubleStrokes = {
 
 
 adjs = {
-	"respeta": "respetuo"
+	"respeta": "respetuo",
+	"numera": "numero",
+	"genera": "genero",
+	"beneficia": "beneficio",
+	"trabaja": "trabajo",
+	"aprovecha": "provecho",
+	"estudia": "estudio",
+	"afecta": "afectuo",
+	"desea": "deseo",
+	"infecta": "infeccio",
+	"engaña": "engaño",
+	"aventaja": "ventajo",
+	"forza": "forzo",
+	"goza": "gozo",
+	"peligra": "peligro",
+	"apena": "peno",
+	"decora": "decoro",
+	"asombra": "asombro"
 }
 
 
