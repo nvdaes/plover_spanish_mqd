@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
 	name='plover_spanish_mqd',
-	version='0.0.4',
+	version='0.0.5',
 	description='Support for plover in Spanish (Melany system)',
 	long_description='file: README.md',
 	url='https://github.com/nvdaes/plover_spanish_mqd',
