@@ -33,6 +33,12 @@ spanish_mqd_single.dict = dict
 def lookup(key):
 	return spanish_mqd_single.lookup(key)
 
+Dependencies
+************
+
+* `Plover Python dictionary <https://github.com/benoit-pierre/plover_python_dictionary>`_
+* `Plover Start words <https://github.com/nvdaes/plover_start_words>`_
+
 Versioning
 **********
 

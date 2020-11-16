@@ -757,7 +757,7 @@ def lookup(key):
 	if doubleStrokes.get(key[0]) is None:
 		raise KeyError
 	spanish_mqd_single.lastValue = doubleStrokes.get(key[0])
-	if len(key) == 1:
+	if len(key) == 1 or key[1] == "*:
 		return " "
 	value = spanish_mqd_single.searchKey(spanish_mqd_single.dict, key[1])
 	if spanish_mqd_single.lastValue.endswith("a") and value[0] in VOWELS:
