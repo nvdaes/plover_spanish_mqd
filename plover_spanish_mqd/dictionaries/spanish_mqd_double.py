@@ -779,16 +779,17 @@ def lookup(key):
 	value = spanish_mqd_single.dict.get(key[0])
 	if value is None or value == "":
 		value = spanish_mqd_single.searchKey(spanish_mqd_single.dict, key[1])
-	if spanish_mqd_single.lastValue.endswith("a") and value[0] in VOWELS:
+	if spanish_mqd_single.lastValue.endswith("ga") and value[0] == "e":
+		value = spanish_mqd.single.lastValue[:-1] + "u" + value
+	elif spanish_mqd_single.lastValue.endswith("a") and value[0] in VOWELS:
 		value = spanish_mqd_single.lastValue[:-1] + value
-	elif adjs.get(spanish_mqd_single.lastValue) is not None and value[:2] in ("sa", "si", sí", "so"):
+	elif adjs.get(spanish_mqd_single.lastValue) is not None and value[:2] in ("sa", "si", "sí", "so"):
 		value = adjs.get(spanish_mqd_single.lastValue) + value
 	elif spanish_mqd_single.lastValue[-1] in ("e", "o") and value[0] == "a":
 		value = spanish_mqd_single.lastValue + "zc" + value
 	else:
 		value = spanish_mqd_single.lastValue + value
 	value.replace("ze", "ce")
-	value.replace("ge", "gue")
 	if not value.endswith(" "):
 		value = value + "{^}"
 	return value
