@@ -776,7 +776,7 @@ def lookup(key):
 	spanish_mqd_single.lastValue = doubleStrokes.get(key[0])
 	if len(key) == 1 or key[1] == "*":
 		return " "
-	value = spanish_mqd_single.dict.get(key[0])
+	value = spanish_mqd_single.dict.get(key[1])[0]
 	if value is None or value == "":
 		value = spanish_mqd_single.searchKey(spanish_mqd_single.dict, key[1])
 	if spanish_mqd_single.lastValue.endswith("ga") and value[0] == "e":
