@@ -14800,4 +14800,6 @@ def lookup(key):
 		value = searchKey(dict, key[0])
 	if value.endswith(" "):
 		return value
+	if value.isdigit():
+		return "{&" + value + "}"
 	return value + "{^}"

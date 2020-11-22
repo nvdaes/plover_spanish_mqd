@@ -20,7 +20,7 @@
 	"CEro*": "{:initial:0 | ceró}",
 	"CIAEOia": "{:initial:acue | cueas}",
 	"CIneo*": "{:initial:100 | cín}",
-	"CInp*": "{:initial:55 | cinos}",
+	"CInp*": "{initial:55 | cinos}",
 	"CNa": "{:initial:contra | cha}",
 	"CNca": "{:initial:conozca | chica}",
 	"CNce": "{:initial:conoce | chice}",
