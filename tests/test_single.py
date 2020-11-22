@@ -1,3 +1,4 @@
+import unittest
 import spanish_mqd_single
 
 def isDictWellFormed():
