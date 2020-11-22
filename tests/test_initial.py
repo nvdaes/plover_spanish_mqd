@@ -5,12 +5,12 @@ from plover_spanish_mqd import system
 
 DICT = os.path.join(DICT_DIR, "initial.json")
 
+with open(DICT) as f:
+	dict = json.load(F)
 
 class TestSingle(unittest.TestCase):
 
 	def setUp(self):
-		with open(DICT) as f:
-			self.dict = json.load(f)
 		self.keys = "".join(system.KEYS)
 
 	def tearDown(self):
