@@ -1,5 +1,5 @@
 import unittest
-from dictionaries import spanish_mqd_single
+from plover_spanish_mqd.dictionaries import spanish_mqd_single
 
 def isDictWellFormed():
 	dict = spanish_mqd_single.dict
