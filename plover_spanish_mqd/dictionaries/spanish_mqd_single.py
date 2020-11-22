@@ -2539,7 +2539,6 @@ dict = {
 	"Itra": ("intra", ""),
 	"Itre": ("inter", ""),
 	"Itro": ("intro", ""),
-	"Llorca ": ("", ""),
 	"N": ("en ", "n"),
 	"n": ("un ", "n"),
 	"N*": ("nunca ", ""),
