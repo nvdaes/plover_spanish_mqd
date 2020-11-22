@@ -2277,7 +2277,6 @@ dict = {
 	"Esnro*": ("Espinosa de los Monteros ", ""),
 	"Eso*": ("ESO ", ""),
 	"Espe*": ("Eclipse ", ""),
-	"ESSSCAN ": ("San Carlos ", ""),
 	"Est": ("este ", ""),
 	"Est*": ("éste ", ""),
 	"Esta*": ("ésta ", ""),
