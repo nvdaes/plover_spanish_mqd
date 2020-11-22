@@ -16,5 +16,5 @@ class TestSingle(unittest.TestCase):
 
 	def test_valueLenght(self):
 		for k, v in self.dict.items():
-			self.assertTrue(len(v) == , k3)
+			self.assertTrue(len(v) == 3, k)
 
