@@ -2,6 +2,7 @@ import unittest
 import os
 import json
 from plover_spanish_mqd import system
+from . import DICT_DIR
 
 DICT = os.path.join(DICT_DIR, "initial.json")
 
