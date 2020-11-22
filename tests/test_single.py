@@ -23,7 +23,7 @@ class TestSingle(unittest.TestCase):
 		for k, v in self.dict.items:
 			for char in k:
 				curIndex = self.keys.find(char)
-				assertTrue(curIndex > prevIndex, k)
+				self.assertTrue(curIndex > prevIndex, k)
 				prevIndex = curIndex
 
 	def test_valueType(self):
