@@ -7932,7 +7932,6 @@ dict = {
 	"SCNRcr": ("Ministro de Sanidad, Consumo y Bienestar Social ", "manuscrit"),
 	"SCNRcr*": ("Ministerio de Sanidad, Consumo y Bienestar Social ", ""),
 	"SCNRcreo": ("manuscritos ", ""),
-	"SCNRcrs*": ("Ministerio de Asuntos Económicos y Transformación Digital ", ""),
 	"SCNRcs": ("Ministro de Agricultura, Alimentación y Medio Ambiente ", ""),
 	"SCNRcs*": ("Ministerio de Agricultura, Alimentación y Medio Ambiente ", ""),
 	"SCNRcse*": ("Yves Saint Geours ", ""),
