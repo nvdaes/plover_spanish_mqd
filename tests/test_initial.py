@@ -2,9 +2,8 @@ import unittest
 import os
 import json
 from plover_spanish_mqd import system
-from . import DICT_DIR
 
-DICT = os.path.join(DICT_DIR, "initial.json")
+DICT = os.path.join(os.path.dirname(__file__), "..", "plover_spanish_mqd", "dictionaries", "initial.json")
 
 
 class TestInitial(unittest.TestCase):
