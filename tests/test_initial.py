@@ -3,15 +3,15 @@ import os
 import json
 from plover_spanish_mqd import system
 
-DICT = os.path.join(DICT_DIR, "initial.json")
+DICT = os.path.join(DICT_DIR, "punctuation.json")
 
-with open(DICT) as f:
-	dict = json.load(F)
 
 class TestSingle(unittest.TestCase):
 
 	def setUp(self):
 		self.keys = "".join(system.KEYS)
+		with open(DICT) as f:
+			dict = json.load(F)
 
 	def tearDown(self):
 		self.dict = None
