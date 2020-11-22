@@ -36,15 +36,6 @@ class TestSingle(unittest.TestCase):
 		for k, v in self.adjs.items():
 			self.assertTrue(isinstance(k, str), k)
 
-	def test_keyOrderAdjs(self):
-		for k, v in self.adjs.items():
-			prevIndex = -1
-			curIndex = -1
-			for char in k:
-				curIndex = self.keys.find(char)
-				self.assertTrue(curIndex > prevIndex, k)
-				prevIndex = curIndex
-
 	def test_valueTypeAdjs(self):
 		for k, v in self.adjs.items():
 			self.assertTrue(isinstance(v, str), k)
