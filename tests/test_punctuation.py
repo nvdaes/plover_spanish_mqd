@@ -1,19 +1,21 @@
 import unittest
-from plover_spanish_mqd.dictionaries import spanish_mqd_double
+import os
+import json
 from plover_spanish_mqd import system
 
+DICT = os.path.join(os.path.dirname(__file__), "..", "plover_spanish_mqd", "dictionaries", "punctuation.json")
 
-class TestDouble(unittest.TestCase):
+
+class TestPunctuation(unittest.TestCase):
 
 	def setUp(self):
 		self.keys = "".join(system.KEYS)
-		self.dict = spanish_mqd_double.doubleStrokes
-		self.adjs = spanish_mqd_double.adjs
+		with open(DICT) as f:
+			self.dict = json.load(f)
 
 	def tearDown(self):
 		self.keys = None
 		self.dict = None
-		self.adjs = None
 
 	def test_keyType(self):
 		for k, v in self.dict.items():
@@ -24,6 +26,10 @@ class TestDouble(unittest.TestCase):
 			prevIndex = -1
 			curIndex = -1
 			for char in k:
+				if char == "/":
+					prevIndex = -1
+					curIndex = -1
+					continue
 				curIndex = self.keys.find(char)
 				self.assertTrue(curIndex > prevIndex, k)
 				prevIndex = curIndex
@@ -32,10 +38,6 @@ class TestDouble(unittest.TestCase):
 		for k, v in self.dict.items():
 			self.assertTrue(isinstance(v, str), k)
 
-	def test_keyTypeAdjs(self):
-		for k, v in self.adjs.items():
-			self.assertTrue(isinstance(k, str), k)
-
-	def test_valueTypeAdjs(self):
-		for k, v in self.adjs.items():
-			self.assertTrue(isinstance(v, str), k)
+	def test_ValueContent(self):
+		for k, v in self.dict.items():
+			self.assertFalse("//" in v, k)

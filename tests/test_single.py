@@ -6,12 +6,12 @@ from plover_spanish_mqd import system
 class TestSingle(unittest.TestCase):
 
 	def setUp(self):
-		self.dict = spanish_mqd_single.dict
 		self.keys = "".join(system.KEYS)
+		self.dict = spanish_mqd_single.dict
 
 	def tearDown(self):
-		self.dict = None
 		self.keys = None
+		self.dict = None
 
 	def test_keyType(self):
 		for k, v in self.dict.items():
