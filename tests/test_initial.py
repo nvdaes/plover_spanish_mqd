@@ -12,7 +12,7 @@ class TestInitial(unittest.TestCase):
 	def setUp(self):
 		self.keys = "".join(system.KEYS)
 		with open(DICT) as f:
-			dict = json.load(F)
+			dict = json.load(f)
 
 	def tearDown(self):
 		self.dict = None
