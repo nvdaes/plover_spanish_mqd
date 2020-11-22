@@ -18,13 +18,13 @@ class TestSingle(unittest.TestCase):
 			self.assertTrue(isinstance(k, str), k)
 
 	def test_keyOrder(self):
-	prevIndex = -1
-	curIndex = -1
-	for k, v in self.dict.items:
-		for char in k:
-			curIndex = self.keys.find(char)
-			assertTrue(curIndex > prevIndex, k)
-			prevIndex = curIndex
+		prevIndex = -1
+		curIndex = -1
+		for k, v in self.dict.items:
+			for char in k:
+				curIndex = self.keys.find(char)
+				assertTrue(curIndex > prevIndex, k)
+				prevIndex = curIndex
 
 	def test_valueType(self):
 		for k, v in self.dict.items():
