@@ -34,7 +34,7 @@ class TestInitial(unittest.TestCase):
 		for k, v in self.dict.items():
 			self.assertTrue(isinstance(v, str), k)
 
-	def test_command(self)):
+	def test_command(self):
 		for k, v in self.dict.items():
 			if v.startswith(":initial:"):
 				self.assertEqual(len(v.split(" | ")), 2, k)
