@@ -13190,7 +13190,7 @@ dict = {
 	"TNtnpo": ("neonatológico ", "neonatólogo "),
 	"TNtnpr": ("de hacer ", "de hacerl"),
 	"TNtnpr*": ("síndrome de Huser ", ""),
-	"TNtnprao": ("Declaración Universal de los Derechos Humanos "),
+	"TNtnprao": ("Declaración Universal de los Derechos Humanos ", ""),
 	"TNtnpreo": ("de hacerlos ", ""),
 	"TNtnprie": ("de hacerse ", "adhesión "),
 	"TNtnr": ("adultez ", "adult"),
