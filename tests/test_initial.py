@@ -43,4 +43,7 @@ class TestInitial(unittest.TestCase):
 			if v.startswith(":initial:"):
 				self.assertEqual(len(v.split(" | ")), 2, k)
 
-
+	def test_ValueContent(self):
+		for k, v in self.dict.items():
+			self.assertFalse("//" in v, k)
+			self.assertFalse(r"^}" in v, k)
