@@ -26,6 +26,8 @@ class TestInitial(unittest.TestCase):
 			prevIndex = -1
 			curIndex = -1
 			for char in k:
+				if char == "/":
+					continue
 				curIndex = self.keys.find(char)
 				self.assertTrue(curIndex > prevIndex, k)
 				prevIndex = curIndex
