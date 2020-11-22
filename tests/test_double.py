@@ -32,7 +32,7 @@ class TestSingle(unittest.TestCase):
 		for k, v in self.dict.items():
 			self.assertTrue(isinstance(v, str), k)
 
-def test_keyTypeAdjs(self):
+	def test_keyTypeAdjs(self):
 		for k, v in self.adjs.items():
 			self.assertTrue(isinstance(k, str), k)
 
