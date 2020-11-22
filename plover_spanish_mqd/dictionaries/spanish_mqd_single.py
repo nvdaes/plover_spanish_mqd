@@ -3619,7 +3619,6 @@ dict = {
 	"PAta*": ("Paquita ", ""),
 	"PAtna*": ("Partida ", ""),
 	"PAtnpr*": ("Patricia Phelps ", ""),
-	"Paz ": ("", ""),
 	"PC": ("Gibraltar ", "g"),
 	"Pc": ("Palabra Complementada ", "pic"),
 	"Pc*": ("Pablo Casado ", ""),
