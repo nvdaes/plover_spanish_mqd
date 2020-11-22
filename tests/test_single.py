@@ -20,7 +20,7 @@ class TestSingle(unittest.TestCase):
 	def test_keyOrder(self):
 		prevIndex = -1
 		curIndex = -1
-		for k, v in self.dict.items:
+		for k, v in self.dict.items():
 			for char in k:
 				curIndex = self.keys.find(char)
 				self.assertTrue(curIndex > prevIndex, k)
