@@ -10,7 +10,7 @@ class TestPunctuation(unittest.TestCase):
 
 	def setUp(self):
 		self.keys = "".join(system.KEYS)
-		with open(DICT) as f:
+		with open(DICT, encoding='utf-8') as f:
 			self.dict = json.load(f)
 
 	def tearDown(self):
