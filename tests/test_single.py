@@ -21,6 +21,3 @@ class TestSingle(unittest.TestCase):
 	def test_single(self):
 		self.assertTrue(isDictWellFormed)
 
-
-if __name__ == '__main__':
-	unittest.main()
