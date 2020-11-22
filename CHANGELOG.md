@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Moved proper names from system dictionaries to specific files outside the system itself.
 
-## [0.1.0] - 2020-11-22
+## [0.1.0](https://github.com/nvdaes/plover_spanish_mqd/releases/tag/v0.1.0) - 2020-11-22
 
 ### Added
 
