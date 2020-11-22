@@ -9828,7 +9828,7 @@ dict = {
 	"SPCTcsnpeo": ("semejantes ", ""),
 	"SPCTcsnpie": ("semejantemente ", ""),
 	"SPCTcsnr": ("semejar ", ""),
-	"SPCTcspt*": ("Consejería de Igualdad y Bienestar Social ", ""),
+	"SPCTcstp*": ("Consejería de Igualdad y Bienestar Social ", ""),
 	"SPCTcst": ("joystick ", ""),
 	"SPCTcstp*": ("Consejería de Igualdad y Bienestar Social ", ""),
 	"SPCTct": ("subjetividad ", "subjetiv"),
