@@ -1,5 +1,5 @@
 import unittest
-import spanish_mqd_single
+from DICTS_DIR import spanish_mqd_single
 
 def isDictWellFormed():
 	dict = spanish_mqd_single.dict
