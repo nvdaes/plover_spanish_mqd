@@ -7,7 +7,7 @@ class TestSingle(unittest.TestCase):
 
 	def setUp(self):
 		self.dict = spanish_mqd_single.dict
-		self.keys = system.KEYS
+		self.keys = "".join(system.KEYS)
 
 	def tearDown(self):
 		self.dict = None
@@ -22,7 +22,7 @@ class TestSingle(unittest.TestCase):
 			prevIndex = -1
 			curIndex = -1
 			for char in k:
-				curIndex = self.keys.index(char)
+				curIndex = self.keys.find(char)
 				self.assertTrue(curIndex > prevIndex, k)
 				prevIndex = curIndex
 
