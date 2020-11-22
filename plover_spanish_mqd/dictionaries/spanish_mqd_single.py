@@ -14529,7 +14529,7 @@ dict = {
 	"VEcsa*": ("Vega ", ""),
 	"VEia": ("ave", ""),
 	"VEnra*": ("Vela ", ""),
-	"VEnra+": ("Vela ", ""),
+	"VEnra*": ("Vela ", ""),
 	"Veo*": ("v", ""),
 	"VEOtnp": ("", "vuls"),
 	"VEOtnpeo": ("", "vulsos "),
