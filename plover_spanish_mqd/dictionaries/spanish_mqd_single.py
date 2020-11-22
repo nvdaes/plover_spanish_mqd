@@ -7950,7 +7950,6 @@ dict = {
 	"SCNRcso*": ("Yolanda González ", ""),
 	"SCNRcspr": ("", "y ell"),
 	"SCNRcspreo": ("y ellos ", ""),
-	"SCNRcsr*": ("Ministerio de Asuntos Económicos y Transformación Digital ", ""),
 	"SCNRcsra": ("magistrada ", "magistratura "),
 	"SCNRcsre*": ("magistrales ", ""),
 	"SCNRcsreo": ("magistrados ", "magistral "),
