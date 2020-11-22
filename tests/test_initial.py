@@ -3,10 +3,10 @@ import os
 import json
 from plover_spanish_mqd import system
 
-DICT = os.path.join(DICT_DIR, "punctuation.json")
+DICT = os.path.join(DICT_DIR, "initial.json")
 
 
-class TestSingle(unittest.TestCase):
+class TestInitial(unittest.TestCase):
 
 	def setUp(self):
 		self.keys = "".join(system.KEYS)

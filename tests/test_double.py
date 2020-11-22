@@ -3,7 +3,7 @@ from plover_spanish_mqd.dictionaries import spanish_mqd_double
 from plover_spanish_mqd import system
 
 
-class TestSingle(unittest.TestCase):
+class TestDouble(unittest.TestCase):
 
 	def setUp(self):
 		self.dict = spanish_mqd_double.doubleStrokes
