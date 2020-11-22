@@ -2313,7 +2313,6 @@ dict = {
 	"Etr*": ("Esther Trujillo ", ""),
 	"Etra*": ("ETRA ", ""),
 	"Etre*": ("Ester ", ""),
-	"FSC Inserta ": (" Germán Sánchez Ruipérez ", "Fundación Germán Sánchez Ruipérez "),
 	"i": ("i ", "i"),
 	"I": ("", "i"),
 	"I*": ("", "í"),
