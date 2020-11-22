@@ -8,13 +8,13 @@ class TestSingle(unittest.TestCase):
 
 	def test_keyType(self):
 		for k, v in self.dict.items():
-			self.assertTrue(isinstance(k, str))
+			self.assertTrue(isinstance(k, str), k)
 
 	def test_valueType(self):
 		for k, v in self.dict.items():
-			self.assertTrue(isinstance(v, tuple))
+			self.assertTrue(isinstance(v, tuple), k)
 
 	def test_valueLenght(self):
 		for k, v in self.dict.items():
-			self.assertTrue(len(v) == 3)
+			self.assertTrue(len(v) == , k3)
 
