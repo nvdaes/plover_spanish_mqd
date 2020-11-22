@@ -14748,7 +14748,8 @@ dict = {
 	"Vtpao*": ("28 de febrero de 2014 ", ""),
 	"Vtpe*": ("Virginia Felipe ", ""),
 	"Vtpi*": ("Victoria Figueredo ", ""),
-	"Vtpo": ("Voces ", "Fundación Voces ")
+	"Vtpo": ("Voces ", "Fundación Voces "),
+	"sS": ("SS, "")
 }
 
 
