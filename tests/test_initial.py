@@ -11,11 +11,11 @@ class TestInitial(unittest.TestCase):
 	def setUp(self):
 		self.keys = "".join(system.KEYS)
 		with open(DICT) as f:
-			dict = json.load(f)
+			self.dict = json.load(f)
 
 	def tearDown(self):
-		self.dict = None
 		self.keys = None
+		self.dict = None
 
 	def test_keyType(self):
 		for k, v in self.dict.items():
