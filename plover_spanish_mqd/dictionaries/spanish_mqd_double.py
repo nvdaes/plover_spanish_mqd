@@ -793,12 +793,13 @@ def lookup(key):
 	if len(key) == 1 or key[1] == "*":
 		return " "
 	value = spanish_mqd_single.searchKey(spanish_mqd_single.dict, key[1])
-	if spanish_mqd_single.lastValue.endswith("ga") and value[0] == "e":
-		value = spanish_mqd_single.lastValue[:-1] + "u" + value
-	elif irregular.get(spanish_mqd.lastValue) and value in ("en ", "es "):
-		value = irregular[spanish_mqd.lastValue] + value
-	elif spanish_mqd_single.lastValue.endswith("a") and value[0] in VOWELS:
-		value = spanish_mqd_single.lastValue[:-1] + value
+	if spanish_mqd_single.lastValue.endswith("a") and value[0] in VOWELS:
+		if irregular.get(spanish_mqd_single.lastValue) and value in ("en ", "es "):
+			value = irregular[spanish_mqd_single.lastValue] + value
+		elif spanish_mqd_single.lastValue.endswith("ga") and value[0] == "e":
+			value = spanish_mqd_single.lastValue[:-1] + "u" + value
+		else:
+			value = spanish_mqd_single.lastValue[:-1] + value
 	elif adjs.get(spanish_mqd_single.lastValue) is not None and value[:2] in ("sa", "si", "sí", "so"):
 		value = adjs.get(spanish_mqd_single.lastValue) + value
 	elif spanish_mqd_single.lastValue[-1] in ("e", "o") and value[0] == "a":
