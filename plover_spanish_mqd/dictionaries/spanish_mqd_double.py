@@ -795,8 +795,8 @@ def lookup(key):
 	value = spanish_mqd_single.searchKey(spanish_mqd_single.dict, key[1])
 	if spanish_mqd_single.lastValue.endswith("ga") and value[0] == "e":
 		value = spanish_mqd_single.lastValue[:-1] + "u" + value
-    elif irregular.get(spanish_mqd.lastValue) and value in ("en ", "es "):
-        value = spanish_mqd.lastValue[:-1] + value
+	elif irregular.get(spanish_mqd.lastValue) and value in ("en ", "es "):
+		value = irregular[spanish_mqd.lastValue] + value
 	elif spanish_mqd_single.lastValue.endswith("a") and value[0] in VOWELS:
 		value = spanish_mqd_single.lastValue[:-1] + value
 	elif adjs.get(spanish_mqd_single.lastValue) is not None and value[:2] in ("sa", "si", "sí", "so"):
