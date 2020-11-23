@@ -788,6 +788,8 @@ def lookup(key):
 	else:
 		value = spanish_mqd_single.lastValue + value
 	value.replace("ze", "ce")
+	value.replace("ostren", "uestren")
+	value.replace("orcen", "uercen")
 	if not value.endswith(" "):
 		value = value + "{^}"
 	return value
