@@ -769,6 +769,22 @@ adjs = {
 	"asombra": "asombro"
 }
 
+irregular = {
+	"acorde": "acuerde",
+	"aprobe": "apruebe",
+	"aposte": "apueste",
+	"comprobe": "compruebe",
+	"console": "consuele",
+	"conte": "cuente",
+	"demostre": "demuestre",
+	"encontre": "encuentre",
+	"esforce": "esfuerce",
+	"force": "fuerce",
+	"jugue": "juegue",
+	"probe": "pruebe",
+	"recorde": "recuerde",
+	"renove": "renueve"
+}
 
 def lookup(key):
 	if doubleStrokes.get(key[0]) is None:
@@ -788,8 +804,10 @@ def lookup(key):
 	else:
 		value = spanish_mqd_single.lastValue + value
 	value.replace("ze", "ce")
-	value.replace("ostren", "uestren")
-	value.replace("orcen", "uercen")
+	for k, v in irregular.items():
+		if value.startswith(k):
+			if value.endswith("en ") or value.endswith("es "):
+				value.replace(k, v)
 	if not value.endswith(" "):
 		value = value + "{^}"
 	return value
