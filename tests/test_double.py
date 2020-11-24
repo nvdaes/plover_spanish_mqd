@@ -51,8 +51,26 @@ class TestDouble(unittest.TestCase):
 		for k, v in self.irregular.items():
 			self.assertTrue(isinstance(v, str), k)
 
-	def test_stenoValues(self):
+	def test_aValues(self):
 		key = ("Ccn", "Eneo")
-		spanish_mqd_single.lastValue = "camina"
-		value = spanish_mqd_double.lookup(key)
-		self.assertEqual(value, "caminen", "Value should be caminen ")
+		values = {
+			"camina": "caminen ",
+			"llega": "lleguen ",
+			"proba": "prueben ",
+			"garantiza": "garanticen"
+		}
+		for k, v in values.items():
+			spanish_mqd_single.lastValue = k
+			value = spanish_mqd_double.lookup(key)
+			self.assertEqual(value, v, "Value should be {0}".format(v))
+
+	def test_zValues(self):
+		key = ("PTNVRc", "Aneo")
+		Values = {
+			"estable": "establezcan ",
+			"cono": "conozcan "
+		}
+		for k, v in values.items():
+			spanish_mqd_single.lastValue = k
+			value = spanish_mqd_double.lookup(key)
+			self.assertEqual(value, v, "Value should be {0}".format(v))
