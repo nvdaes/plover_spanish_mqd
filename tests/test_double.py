@@ -52,11 +52,7 @@ class TestDouble(unittest.TestCase):
 			self.assertTrue(isinstance(v, str), k)
 
 	def test_stenoValues(self):
-		key = ("Ccn")
-		doubleStrokes = self.dict
-		value = spanish_mqd_double.lookup(key)
-		self.assertEqual(value, " ", "Value should be space")
-		self.assertEqual(spanish_mqd_single.lastValue, "camina", "Last value should be camina")
 		key = ("Ccn", "Eneo")
+		spanish_mqd_single.lastValue = "camina"
 		value = spanish_mqd_double.lookup(key)
 		self.assertEqual(value, "caminen ", "Value should be caminen ")
