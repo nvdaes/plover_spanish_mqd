@@ -54,36 +54,30 @@ class TestDouble(unittest.TestCase):
 
 	def test_camina(self):
 		key = ("Ccn", "Eneo")
-		spanish_mqd_single.lastValue = "camina"
 		value = spanish_mqd_double.lookup(key)
 		self.assertEqual(value, "caminen ", "Value should be caminen ")
 
 	def test_llega(self):
-		key = ("Ccn", "Eneo")
-		spanish_mqd_single.lastValue = "llega"
+		key = ("PCVRcs", "Eneo")
 		value = spanish_mqd_double.lookup(key)
 		self.assertEqual(value, "lleguen ", "Value should be lleguen ")
 
 	def test_garantiza(self):
-		key = ("Ccn", "Eneo")
-		spanish_mqd_single.lastValue = "garantiza"
+		key = ("PCTNsn", "Eneo")
 		value = spanish_mqd_double.lookup(key)
 		self.assertEqual(value, "garanticen ", "Value should be garanticen ")
 
 	def test_proba(self):
-		key = ("Ccn", "Eneo")
-		spanish_mqd_single.lastValue = "proba"
+		key = ("PRct", "Eneo")
 		value = spanish_mqd_double.lookup(key)
 		self.assertEqual(value, "prueben ", "Value should be prueben ")
 
 	def test_estable(self):
-		key = ("Ccn", "Aneo")
-		spanish_mqd_single.lastValue = "estable"
+		key = ("PTNVRc", "Aneo")
 		value = spanish_mqd_double.lookup(key)
 		self.assertEqual(value, "establezcan ", "Value should be establezcan ")
 
 	def test_cono(self):
-		key = ("Ccn", "Aneo")
-		spanish_mqd_single.lastValue = "cono"
+		key = ("CNc", "Aneo")
 		value = spanish_mqd_double.lookup(key)
 		self.assertEqual(value, "conozcan ", "Value should be conozcan ")
