@@ -51,8 +51,11 @@ class TestDouble(unittest.TestCase):
 		for k, v in self.irregular.items():
 			self.assertTrue(isinstance(v, str), k)
 
-	def checkStenoValues(self):
-		spanish_mqd_single.lastValue = "camina"
-		key = ("Cr", "Eneo")
+	def test_stenoValues(self):
+		key = ("Ccn")
 		value = spanish_mqd_double.lookup(key)
-		self.assertEqual(value, "caminan ", "Value should be caminen ")
+		self.assertEqual(value, " ", "Value should be space")
+		self.assertEqual(spanish_mqd_single.lastValue, "camina", "Last value should be camina")
+		key = ("Ccn", "Eneo")
+		value = spanish_mqd_double.lookup(key)
+		self.assertEqual(value, "caminen ", "Value should be caminen ")
