@@ -56,6 +56,6 @@ class TestDouble(unittest.TestCase):
 		value = spanish_mqd_double.lookup(key)
 		self.assertEqual(value, " ", "Value should be space")
 		self.assertEqual(spanish_mqd_single.lastValue, "camina", "Last value should be camina")
-		key = ("Ccn, "Eneo"")
+		key = ("Ccn", "Eneo"")
 		value = spanish_mqd_double.lookup(key)
 		self.assertEqual(value, " ", "Value should be caminen ")
