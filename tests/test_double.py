@@ -53,6 +53,6 @@ class TestDouble(unittest.TestCase):
 
 	def checkStenoValues(self):
 		spanish_mqd_single.lastValue = "camina"
-		key = ("Ccn", "Eneo")
+		key = ("Cr", "Eneo")
 		value = spanish_mqd_double.lookup(key)
 		self.assertEqual(value, "caminan ", "Value should be caminen ")
