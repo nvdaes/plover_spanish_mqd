@@ -66,7 +66,7 @@ class TestDouble(unittest.TestCase):
 
 	def test_zValues(self):
 		key = ("PTNVRc", "Aneo")
-		Values = {
+		values = {
 			"estable": "establezcan ",
 			"cono": "conozcan "
 		}
