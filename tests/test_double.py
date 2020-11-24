@@ -17,6 +17,7 @@ class TestDouble(unittest.TestCase):
 		self.dict = None
 		self.adjs = None
 		self.irregular = None
+		spanish_mqd_single.lastValue = ""
 
 	def test_keyType(self):
 		for k, v in self.dict.items():
