@@ -81,3 +81,9 @@ class TestDouble(unittest.TestCase):
 		key = ("CNc", "Aneo")
 		value = spanish_mqd_double.lookup(key)
 		self.assertEqual(value, "conozcan ", "Value should be conozcan ")
+
+	def test_respetuo(self):
+		key = ("SPt", "sa")
+		value = spanish_mqd_double.lookup(key)
+		self.assertEqual(value, "respetuosa ", "Value should be respetuosa ")
+
