@@ -17,7 +17,7 @@
 	"Ccto": "{:initial:activo | civo}",
 	"Ce*": "{:initial:Comunidad Europea | cé}",
 	"CEo*": "{:initial:CEO | ceó}",
-	"CEro*": "{:initial:0\\{^}\\ | ceró}",
+	"CEro*": "{:initial:0\\{^\\} | ceró}",
 	"CEpr*": "00\\{^}\\",
 	"CIAEOia": "{:initial:acue | cueas}",
 	"CIAOcp*": "40\\{^}\\",
