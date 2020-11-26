@@ -432,7 +432,7 @@
 	"SPCTNtno": "Excmo. Sr.{-|}",
 	"SPCVRsneo": "{:initial:simules | simulos}",
 	"spie": "{:initial:otoemisiones | siones}",
-	"Sreo": "Sr.{-|}",
+	"Sreo*": "Sr.{-|}",
 	"Sra*": "Sra.{-|}",
 	"Ssa": "{:initial:sin esa | sísima}",
 	"Sseo": "{:initial:sin esos | sísimos}",
