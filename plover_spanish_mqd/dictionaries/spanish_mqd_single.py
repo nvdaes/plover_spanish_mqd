@@ -7587,7 +7587,7 @@ dict = {
 	"SCTNVRn*": ("infór", ""),
 	"SCTNVRna*": ("informalidad ", ""),
 	"SCTNVRneo": ("informes ", ""),
-	"SCTNVRnia*": ("informalidades "),
+	"SCTNVRnia*": ("informalidades ", ""),
 	"SCTNVRnie": ("información ", "Asesoramiento "),
 	"SCTNVRnpe": ("informante ", ""),
 	"SCTNVRnpeo": ("informantes ", ""),
