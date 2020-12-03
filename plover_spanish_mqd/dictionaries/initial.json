@@ -153,7 +153,7 @@
 	"NEOro*": "{:initial:neuró\\{^\\} | nuró}",
 	"NEsnr": "{:initial:Instituto Nacional de Empleo | nem\\{^\\}}",
 	"NIAEOct*": "99{^}",
-	"NIAEOcte*": "9\\{^\\}",
+	"NIAEOcte*": "9{^}",
 	"NIco": "{:initial:Instituto de Integración a la Comunidad | nico}",
 	"NIco*": "{:initial:INICO | nicó}",
 	"NIsa": "{:initial:ni siquiera | nisa}",
