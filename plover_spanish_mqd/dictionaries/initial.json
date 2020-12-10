@@ -90,7 +90,7 @@
 	"CNtnria": "{:initial:en contra de las | cionadoras}",
 	"CNtpie": "{:initial:concreciones | cionamientos}",
 	"CNVRrie": "{:initial:moverse | movedoramente}",
-	"Co": "{:initial:eco| co}",
+	"Co": "{:initial:eco\\{^\\} | co}",
 	"Co*": "{:initial:ecó | có}",
 	"COcta": "{:initial:Comunidad Valenciana | cova}",
 	"COie": "{:initial:Centro de Orientación de Información y Empleo | coe\\{^\\}}",

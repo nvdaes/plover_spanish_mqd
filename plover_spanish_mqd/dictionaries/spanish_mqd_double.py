@@ -773,14 +773,16 @@ irregular = {
 	"acorda": "acuerd",
 	"aproba": "aprueb",
 	"aposta": "apuest",
+	"atravesa": "atravies",
 	"comproba": "comprueb",
 	"consola": "consuel",
 	"conta": "cuent",
 	"demostra": "demuestr",
 	"encontra": "encuentr",
-	"esforza": "esfuerc",
-	"forca": "fuerc",
+	"esforza": "esfuerz",
+	"forza": "fuerz",
 	"juga": "juegu",
+	"mostra": "muestr",
 	"proba": "prueb",
 	"recorda": "recuerd",
 	"renova": "renuev"
@@ -798,16 +800,15 @@ def lookup(key):
 			value = irregular[spanish_mqd_single.lastValue] + value
 		elif spanish_mqd_single.lastValue.endswith("ga") and value[0] == "e":
 			value = spanish_mqd_single.lastValue[:-1] + "u" + value
-		elif spanish_mqd_single.lastValue.endswith("za") and value[0] == "e":
-			value = spanish_mqd_single.lastValue[:-2] + "c" + value
 		else:
 			value = spanish_mqd_single.lastValue[:-1] + value
 	elif adjs.get(spanish_mqd_single.lastValue) is not None and value[:2] in ("sa", "si", "sí", "so"):
 		value = adjs.get(spanish_mqd_single.lastValue) + value
-	elif spanish_mqd_single.lastValue[-1] in ("e", "o") and value[0] == "a":
+	elif spanish_mqd_single.lastValue[-1] in ("e", "o", "u") and value[0] == "a":
 		value = spanish_mqd_single.lastValue + "zc" + value
 	else:
 		value = spanish_mqd_single.lastValue + value
+	value = value.replace("ze", "ce")
 	if not value.endswith(" "):
 		value = value + "{^}"
 	return value
