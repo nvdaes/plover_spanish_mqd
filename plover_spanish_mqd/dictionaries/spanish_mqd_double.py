@@ -798,7 +798,9 @@ def lookup(key):
 	if spanish_mqd_single.lastValue.endswith("a") and value[0] in VOWELS:
 		if irregular.get(spanish_mqd_single.lastValue) and value in ("an ", "as ", "en ", "es "):
 			value = irregular[spanish_mqd_single.lastValue] + value
-		elif spanish_mqd_single.lastValue.endswith("ga") and value[0] == "e":
+		elif spanish_mqd_single.lastValue.endswith("ca") and (value[0] == "e" or value[0] == "é"):
+			value = spanish_mqd_single.lastValue[:-2] + "qu" + value
+		elif spanish_mqd_single.lastValue.endswith("ga") and (value[0] == "e" or value[0] == "é"):
 			value = spanish_mqd_single.lastValue[:-1] + "u" + value
 		else:
 			value = spanish_mqd_single.lastValue[:-1] + value
@@ -809,6 +811,7 @@ def lookup(key):
 	else:
 		value = spanish_mqd_single.lastValue + value
 	value = value.replace("ze", "ce")
+	value = value.replace("zé", "cé")
 	if not value.endswith(" "):
 		value = value + "{^}"
 	return value
