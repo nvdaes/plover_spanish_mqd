@@ -795,7 +795,7 @@ def lookup(key):
 	if len(key) == 1:
 		return
 	if key[1] == "*":
-		mqd_single.lastValue = ""
+		spanish_mqd_single.lastValue = ""
 		return " "
 	value = spanish_mqd_single.searchKey(spanish_mqd_single.dict, key[1])
 	if spanish_mqd_single.lastValue.endswith("a") and value[0] in VOWELS:
