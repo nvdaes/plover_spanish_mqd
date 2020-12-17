@@ -800,9 +800,14 @@ def lookup(key):
 	value = spanish_mqd_single.searchKey(spanish_mqd_single.dict, key[1])
 	if spanish_mqd_single.lastValue.endswith("a") and value[0] in VOWELS:
 		if irregular.get(spanish_mqd_single.lastValue) and value in ("an ", "as ", "en ", "es "):
-			value = irregular[spanish_mqd_single.lastValue] + value
+			if irregular[spanish_mqd_single.lastValue].endswith("g") and value.startswith("e"):
+				value = irregular[spanish_mqd_single.lastValue] + "u" + value
+			else:
+				value = irregular[spanish_mqd_single.lastValue] + value
 		elif spanish_mqd_single.lastValue.endswith("ca") and (value[0] == "e" or value[0] == "é"):
 			value = spanish_mqd_single.lastValue[:-2] + "qu" + value
+		elif spanish_mqd_single.lastValue.endswith("ga") and (value[0] == "e" or value[0] == "é"):
+			value = spanish_mqd_single.lastValue[:-1] + "u" + value
 		else:
 			value = spanish_mqd_single.lastValue[:-1] + value
 	elif adjs.get(spanish_mqd_single.lastValue) is not None and value[:2] in ("sa", "si", "sí", "so"):
@@ -815,8 +820,6 @@ def lookup(key):
 		value = spanish_mqd_single.lastValue + value
 	value = value.replace("ze", "ce")
 	value = value.replace("zé", "cé")
-	value = value.replace("ge", "gue")
-	value = value.replace("gé", "gué")
 	if not value.endswith(" "):
 		value = value + "{^}"
 	return value
