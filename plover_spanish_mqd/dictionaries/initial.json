@@ -278,7 +278,7 @@
 	"PTVIAeo*": "{:initial:habíais | bíais}",
 	"PTVIAneo*": "{:initial:habían | bían}",
 	"PTVIAsnreo*": "{:initial:habíamos | bíamos}",
-	"PTVIE*": "{:initial:hubié| bié\\{^\\}}",
+	"PTVIE*": "{:initial:hubié\\{^\\} | bié\\{^\\}}",
 	"PTVIE/RAeo": "hubierais",
 	"PTVIE/RAneo": "hubieran",
 	"PTVIE/REeo": "hubiereis",
