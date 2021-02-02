@@ -13,7 +13,7 @@ setup(
 	author_email='nrm1977@gmail.com',
 	license='GNU General Public License v3 or later (GPLv3+)',
 	classifiers=[
-		'Development Status :: Development Status :: 5 - Production/Stable',
+		'Development Status :: 5 - Production/Stable',
 		'Environment :: Plugins',
 		'Intended Audience :: End Users/Desktop',
 		'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
