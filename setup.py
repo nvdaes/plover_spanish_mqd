@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
 	name='plover_spanish_mqd',
-	version='0.1.3',
+	version='1.0.0',
 	description='Support for plover in Spanish (Melany system)',
 	long_description='file: README.md',
 	url='https://github.com/nvdaes/plover_spanish_mqd',
@@ -13,7 +13,7 @@ setup(
 	author_email='nrm1977@gmail.com',
 	license='GNU General Public License v3 or later (GPLv3+)',
 	classifiers=[
-		'Development Status :: 1 - Planning',
+		'Development Status :: Development Status :: 5 - Production/Stable',
 		'Environment :: Plugins',
 		'Intended Audience :: End Users/Desktop',
 		'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
