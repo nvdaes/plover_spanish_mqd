@@ -3,7 +3,7 @@ import os
 import json
 from plover_spanish_mqd import system
 
-DICT = os.path.join(os.path.dirname(__file__), "..", "plover_spanish_mqd", "dictionaries", "user.json")
+DICT = os.path.join(os.path.dirname(__file__), "..", "plover_spanish_mqd", "dictionaries", "user_es.json")
 
 
 class TestUser(unittest.TestCase):
