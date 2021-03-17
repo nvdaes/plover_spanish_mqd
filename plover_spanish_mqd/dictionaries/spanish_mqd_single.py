@@ -1234,7 +1234,6 @@ dict = {
 	"CTNctpie": ("incentivaciones ", ""),
 	"CTNctr": ("incentivar ", ""),
 	"CTNe": ("comunes ", ""),
-	"Ctne*": ("ACUDE ", ""),
 	"CTne*": ("continué ", ""),
 	"Ctneo": ("", "ciados "),
 	"CTNeo": ("común ", ""),
