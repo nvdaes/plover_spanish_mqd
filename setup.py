@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
 	name='plover_spanish_mqd',
-	version='1.0.6',
+	version='2.0.0',
 	description='Support for plover in Spanish (Melany system)',
 	long_description='file: README.md',
 	url='https://github.com/nvdaes/plover_spanish_mqd',
@@ -19,13 +19,13 @@ setup(
 		'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
 		'Operating System :: OS Independent',
 		'Programming Language :: Python :: 3',
-		'Programming Language :: Python :: 3.6',
+		'Programming Language :: Python :: 3.8',
 	],
 	keywords='plover plover_plugin',
 	install_requires=[
-		'plover>=4.0.0.dev0',
-		'plover-python-dictionary>=0.5.9',
-		'plover-start-words>=0.0.1',
+		'plover>=4.0.0.dev8',
+		'plover-python-dictionary>=1,<2',',
+		'plover-start-words>=1,<2',
 	],
 	packages=[
 		'plover_spanish_mqd',

@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/nvdaes/plover_spanish_mqd)
 - No planned changes.
+
+## [2.0.0](https://github.com/nvdaes/plover_spanish_mqd/releases/tag/v2.0.0) - 2021-04-08
+
+### Changed
+- Requires Plover 4.0.0.dev8 or higher
+- Requires Plover Python Dictionary 1
+- Requires Plover Start Words 1
+- Minor improvements in dictionary contents
+
 ## [1.0.1](https://github.com/nvdaes/plover_spanish_mqd/releases/tag/v1.0.1) - 2021-02-02
 
 ### Fixed
