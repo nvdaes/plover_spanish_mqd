@@ -1,6 +1,3 @@
-LONGEST_KEY = 1
-lastValue = ""
-
 numbers = {
 	"S": "1",
 	"P": "2",
@@ -11716,51 +11713,3 @@ dict = {
 	"Vtnpro": ("vehículo ", ""),
 	"Vtnr": ("", "equival"),
 }
-
-
-def searchKey(dictionary, stroke):
-	searchKey = stroke[:]
-	searchKeyValue = ""
-	lenSearched = 0
-	value = ""
-	while len(searchKey) > 0:
-		if dictionary.get(searchKey) is not None:
-			searchKeyValue = dictionary.get(searchKey)[1]
-		if searchKeyValue == "":
-			searchKey = searchKey[:len(searchKey) - 1]
-		else:
-			value += searchKeyValue
-			searchKeyValue = ""
-			lenSearched += len(searchKey)
-			searchKey = stroke[lenSearched:]
-	if value == "":
-		value = "{empty}"
-	return value
-
-
-def lookup(key):
-	value = ""
-	# Numbers
-	if "#" in key[0]:
-		for k in key[0]:
-			if k in ("A", "#"):
-				continue
-			numberValue = numbers.get(k)
-			if numberValue is None:
-				break
-			value += numberValue
-		if value != "" and "A" in key[0]:
-			if len(value) > 1:
-				value = value[::-1]
-			else:
-				value = "{firstDigit}{secondDigit}".format(firstDigit=value, secondDigit=value)
-	if dict.get(key[0]) is not None:
-		value = dict.get(key[0])[0]
-	if value == "":
-		value = searchKey(dict, key[0])
-	if value.endswith(" "):
-		return value
-	if value.isdigit() or value.endswith(".000"):
-		return "{&" + value + "}"
-	return value + "{^}"
-
