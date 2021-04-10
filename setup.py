@@ -27,6 +27,11 @@ setup(
 		'plover-python-dictionary>=1,<2',
 		'plover-start-words>=1,<2',
 	],
+	extras_require={
+		'test': '''
+		pytest
+	'''
+	},
 	packages=[
 		'plover_spanish_mqd',
 	],
