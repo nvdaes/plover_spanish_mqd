@@ -24,7 +24,7 @@ setup(
 	keywords='plover plover_plugin',
 	install_requires=[
 		'plover>=4.0.0.dev8',
-		'plover-python-dictionary>=1,<2',
+		'plover-python-dictionary<=0.5.10',
 		'plover-start-words>=1,<2',
 	],
 	extras_require={
