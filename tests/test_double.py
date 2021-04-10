@@ -1,6 +1,6 @@
 import unittest
-from plover_spanish_mqd.dictionaries import spanish_mqd_single
-from plover_spanish_mqd.dictionaries import spanish_mqd_double
+from plover_spanish_mqd import spanish_mqd_single
+from plover_spanish_mqd import spanish_mqd_double
 from plover_spanish_mqd import system
 
 

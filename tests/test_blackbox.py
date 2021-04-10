@@ -14,10 +14,8 @@ def with_pydicts(fn):
 
     @functools.wraps(fn)
     def wrapper(bb, *args, **kwargs):
-        double_dict = load_dictionary(DICTIONARIES_ROOT + '/spanish_mqd_double.py')
-        single_dict = load_dictionary(DICTIONARIES_ROOT + '/spanish_mqd_single.py')
-        single_dict.lastValue = ''
-        bb.dictionary.set_dicts(bb.dictionary.dicts + [double_dict, single_dict])
+        py_dict = load_dictionary(DICTIONARIES_ROOT + '/spanish_mqd.py')
+        bb.dictionary.set_dicts(bb.dictionary.dicts + [py_dict])
         fn(bb, *args, **kwargs)
 
     return wrapper

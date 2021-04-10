@@ -1,8 +1,5 @@
-import os
-import sys
-sys.path.append(os.path.dirname(__file__))
-import spanish_mqd_single
-del sys.path[-1]
+from . import spanish_mqd_single
+
 
 LONGEST_KEY = 2
 
@@ -807,7 +804,7 @@ def lookup(key):
 		raise KeyError
 	spanish_mqd_single.lastValue = doubleStrokes.get(key[0])
 	if len(key) == 1:
-		return
+		raise KeyError
 	if key[1] == "*":
 		spanish_mqd_single.lastValue = ""
 		return " "
