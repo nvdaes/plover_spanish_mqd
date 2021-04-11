@@ -49,11 +49,12 @@ class TestsBlackbox:
         "*": "=undo",
 
         Ccn    ' camin'
-        TPVa-  ' caminaba'
+        PTVa-  ' caminaba'
         *      ' camin'
         A*-    ' caminá'
         *      ' camin'
         E-     ' camine'
+        *      ' camin'
         Eneo-  ' caminen'
         *      ' camin'
         O-     ' camino'
@@ -67,6 +68,7 @@ class TestsBlackbox:
         PTVAneo  ' llegaban'
         *        ' lleg'
         Eneo     ' lleguen'
+        *        ' lleg'
         E*       ' llegué'
         '''
 
@@ -80,5 +82,6 @@ class TestsBlackbox:
         Eneo   ' jueguen'
         *      ' jueg'
         E*     ' jugué'
+              *      ' jueg'
         Astpo  ' jugando'
         '''
