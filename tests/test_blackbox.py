@@ -12,76 +12,76 @@ from plover_build_utils import testing as plover_testing
 
 def with_pydicts(fn):
 
-    @functools.wraps(fn)
-    def wrapper(bb, *args, **kwargs):
-        py_dict = load_dictionary(DICTIONARIES_ROOT + '/spanish_mqd.py')
-        bb.dictionary.set_dicts(bb.dictionary.dicts + [py_dict])
-        fn(bb, *args, **kwargs)
+	@functools.wraps(fn)
+	def wrapper(bb, *args, **kwargs):
+		py_dict = load_dictionary(DICTIONARIES_ROOT + '/spanish_mqd.py')
+		bb.dictionary.set_dicts(bb.dictionary.dicts + [py_dict])
+		fn(bb, *args, **kwargs)
 
-    return wrapper
+	return wrapper
 
 
 def blackbox_test(cls):
 
-    class wrapper(cls):
-        pass
+	class wrapper(cls):
+		pass
 
-    for name in dir(wrapper):
-        if name.startswith('test_'):
-            fn = getattr(wrapper, name)
-            new_fn = with_pydicts(fn)
-            setattr(wrapper, name, new_fn)
+	for name in dir(wrapper):
+		if name.startswith('test_'):
+			fn = getattr(wrapper, name)
+			new_fn = with_pydicts(fn)
+			setattr(wrapper, name, new_fn)
 
-    return plover_testing.blackbox_test(wrapper)
+	return plover_testing.blackbox_test(wrapper)
 
 
 @blackbox_test
 class TestsBlackbox:
 
-    @classmethod
-    def setup_class(cls):
-        log.set_level(log.WARNING)
-        registry.update()
-        system.setup('Spanish MQD')
+	@classmethod
+	def setup_class(cls):
+		log.set_level(log.WARNING)
+		registry.update()
+		system.setup('Spanish MQD')
 
-    def test_regular_verb_1(self):
-        r'''
-        "*": "=undo",
+	def test_regular_verb_1(self):
+		r'''
+		"*": "=undo",
 
-        Ccn    ' camin'
-        PTVa-  ' caminaba'
-        *      ' camin'
-        A*-    ' caminá'
-        *      ' camin'
-        E-     ' camine'
-        *      ' camin'
-        Eneo-  ' caminen'
-        *      ' camin'
-        O-     ' camino'
-        '''
+		Ccn	   ' camin'
+		PTVa-  ' caminaba'
+		*	   ' camin'
+		A*-	   ' caminá'
+		*	   ' camin'
+		E-	   ' camine'
+		*	   ' camin'
+		Eneo-  ' caminen'
+		*	   ' camin'
+		O-	   ' camino'
+		'''
 
-    def test_regular_verb_2(self):
-        r'''
-        "*": "=undo",
+	def test_regular_verb_2(self):
+		r'''
+		"*": "=undo",
 
-        PCVRcs   ' lleg'
-        PTVAneo  ' llegaban'
-        *        ' lleg'
-        Eneo     ' lleguen'
-        *        ' lleg'
-        E*       ' llegué'
-        '''
+		PCVRcs	 ' lleg'
+		PTVAneo	 ' llegaban'
+		*		 ' lleg'
+		Eneo	 ' lleguen'
+		*		 ' lleg'
+		E*		 ' llegué'
+		'''
 
-    def test_irregular_1(self):
-        r'''
-        "*": "=undo",
+	def test_irregular_1(self):
+		r'''
+		"*": "=undo",
 
-        PCTcs  ' jueg'
-        TNo    ' jugado'
-        *      ' jueg'
-        Eneo   ' jueguen'
-        *      ' jueg'
-        E*     ' jugué'
-              *      ' jueg'
-        Astpo  ' jugando'
-        '''
+		PCTcs  ' jueg'
+		TNo	   ' jugado'
+		*	   ' jueg'
+		Eneo   ' jueguen'
+		*	   ' jueg'
+		E*	   ' jugué'
+			  *		 ' jueg'
+		Astpo  ' jugando'
+		'''
