@@ -5192,6 +5192,7 @@ dict = {
 	"PTNsne": ("priorice ", "prioricé "),
 	"PTNsneo": ("priorices ", ""),
 	"PTNsnia*": ("prioridades ", ""),
+	"PTNsnie": ("priorización ", ""),
 	"PTNsnr": ("priorizar ", "prioritari"),
 	"PTNsnra*": ("prioritaria ", ""),
 	"PTNsnria*": ("prioritarias ", ""),
