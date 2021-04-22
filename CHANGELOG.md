@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.1](https://github.com/nvdaes/plover_spanish_mqd/releases/tag/v2.0.1) - 2021-04-22
 
+### Changed
+- Minor improvements in dictionary contents
+
+### Removed
+- Removed ability to import Python dictionaries from other dictionaries
+
 ### Fixed
 - Fixed N- and -n for keymaps of many systems
 
