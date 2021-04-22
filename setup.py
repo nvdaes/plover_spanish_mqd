@@ -29,7 +29,7 @@ setup(
 	],
 	extras_require={
 		'test': '''
-		plover @ https://github.com/openstenoproject/plover/releases/download/continuous/plover-4.0.0.dev8+454.g378848a-py3-none-any.whl
+		plover>=4.0.0.dev6
 		pytest
 	'''
 	},
