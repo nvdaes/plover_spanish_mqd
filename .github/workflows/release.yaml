@@ -30,6 +30,9 @@ jobs:
     - name: Test
       run: |
         tox
+    - name: Build
+      run: |
+        python setup.py sdist bdist_wheel
     - name: Create Release
       uses: softprops/action-gh-release@v1
       env:
