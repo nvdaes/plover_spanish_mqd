@@ -29,7 +29,7 @@ setup(
 	],
 	extras_require={
 		'test': '''
-		plover>=4.0.0.dev8
+		plover==4.0.0.dev9
 		pytest
 	'''
 	},
