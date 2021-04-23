@@ -1,4 +1,8 @@
-from . import spanish_mqd_single
+import os
+from plover.oslayer.config import CONFIG_DIR
+
+os.chdir(CONFIG_DIR)
+import spanish_mqd_single 
 
 
 LONGEST_KEY = 2
