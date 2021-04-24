@@ -28,7 +28,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: Release ${{ github.ref }}
         prerelease: ${{ endsWith(github.ref, '-dev') }}
         body_path: changelog.md
     - name: Publish
