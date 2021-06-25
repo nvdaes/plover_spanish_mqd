@@ -11613,6 +11613,7 @@ dict = {
 	"Vi": ("vi ", ""),
 	"VIAia": ("avia", "aviá"),
 	"VIcsti*": ("VIII ", ""),
+	"VIi": ("vida independiente ", ""),
 	"VIi*": ("VII ", ""),
 	"VItnpr*": ("VIH ", ""),
 	"Vn": ("voluminosidad ", "voluminos"),
