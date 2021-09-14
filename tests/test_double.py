@@ -21,7 +21,7 @@ class TestDouble(unittest.TestCase):
 
 	def test_repeatedKey(self):
 		values = list(self.dict.values())
-		self.assertEqual(len(set(values)), len(values), f"Repeated values are {list(values) - list(set(values))}")
+		self.assertEqual(len(set(values)), len(values), f"Found repeated values")
 
 	def test_keyType(self):
 		for k, v in self.dict.items():
