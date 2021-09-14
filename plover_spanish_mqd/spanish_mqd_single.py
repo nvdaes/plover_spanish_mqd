@@ -1,6 +1,9 @@
-LONGEST_KEY = 1
+from typing import Mapping, Iterable, Optional
 
-numbers = {
+
+LONGEST_KEY: int = 1
+
+numbers: Mapping[str, str] = {
 	"S": "1",
 	"P": "2",
 	"T": "3",
@@ -13,7 +16,7 @@ numbers = {
 	"i": "9"
 }
 
-dict = {
+dict: Mapping[str, Tuple[str, str]] = {
 	"a": ("", "a "),
 	"A": ("", "a"),
 	"a*": ("", "á "),
@@ -11760,11 +11763,11 @@ dict = {
 }
 
 
-def searchKey(dictionary, stroke):
-	searchKey = stroke[:]
-	searchKeyValue = ""
-	lenSearched = 0
-	value = ""
+def searchKey(dictionary: Mapping[str, Tuple[str, str]], stroke: str): -> str
+	searchKey: Iterable[str] = stroke[:]
+	searchKeyValue: str = ""
+	lenSearched: int = 0
+	value: str = ""
 	while len(searchKey) > 0:
 		if dictionary.get(searchKey) is not None:
 			searchKeyValue = dictionary.get(searchKey)[1]
@@ -11780,8 +11783,9 @@ def searchKey(dictionary, stroke):
 	return value
 
 
-def lookup(key):
-	value = ""
+def lookup(key: Sequence[str]): -> Optional[str]
+	value: str = ""
+    numberValue: Optional[str] = None
 	# Numbers
 	if "#" in key[0]:
 		for k in key[0]:

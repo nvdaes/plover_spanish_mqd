@@ -1,14 +1,15 @@
 import os
 import sys
+from typing import Tuple, Mapping, Optional, Sequence
 sys.path.append(os.path.dirname(__file__))
 import spanish_mqd_single
 del sys.path[-1]
 
-LONGEST_KEY = 2
+LONGEST_KEY: int = 2
 
-VOWELS = ("a", "á", "e", "é", "i", "í", "o", "ó", "u", "ú")
+VOWELS: Tuple[str, ...] = ("a", "á", "e", "é", "i", "í", "o", "ó", "u", "ú")
 
-doubleStrokes = {
+doubleStrokes: Mapping[str, str] = {
 	"Ccn": "camina",
 	"Ccs": "categoriza",
 	"Ccsn": "aconseja",
@@ -750,7 +751,7 @@ doubleStrokes = {
 }
 
 
-adjs = {
+adjs: Mapping[str, str] = {
 	"afecta": "afectuo",
 	"apena": "peno",
 	"aprovecha": "provecho",
@@ -771,7 +772,7 @@ adjs = {
 	"trabaja": "trabajo"
 }
 
-irregular = {
+irregular: Mapping[str, str] = {
 	"acorda": "acuerd",
 	"alenta": "alient",
 	"aposta": "apuest",
@@ -804,7 +805,7 @@ irregular = {
 	"renova": "renuev"
 }
 
-def lookup(key):
+def lookup(key: Sequence[str]): -> Optional[str]
 	if doubleStrokes.get(key[0]) is None:
 		raise KeyError
 	spanish_mqd_single.lastValue = doubleStrokes.get(key[0])
