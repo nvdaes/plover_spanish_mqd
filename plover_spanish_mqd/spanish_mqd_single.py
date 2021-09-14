@@ -1,5 +1,4 @@
 LONGEST_KEY = 1
-lxastValue = ""
 
 numbers = {
 	"S": "1",

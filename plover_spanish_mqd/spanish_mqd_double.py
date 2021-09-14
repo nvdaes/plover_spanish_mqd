@@ -1,5 +1,8 @@
-from . import spanish_mqd_single
-
+import os
+import sys
+sys.path.append(os.path.dirname(__file__))
+import spanish_mqd_single
+del sys.path[-1]
 
 LONGEST_KEY = 2
 
@@ -129,6 +132,7 @@ doubleStrokes = {
 	"CTVsn": "inflama",
 	"CTVt": "infecta",
 	"CVc": "equivoca",
+	"CVcn": "vacuna",
 	"CVctp": "cautiva",
 	"CVn": "vincula",
 	"CVRc": "condu",
@@ -429,6 +433,7 @@ doubleStrokes = {
 	"SCTNRc": "clasifica",
 	"SCTNRcn": "matricula",
 	"SCTNRcs": "cataloga",
+	"SCTNRcsn": "inmuniza",
 	"SCTNRctn": "demanda",
 	"SCTNRn": "determina",
 	"SCTNRsn": "escolariza",
@@ -804,7 +809,7 @@ def lookup(key):
 		raise KeyError
 	spanish_mqd_single.lastValue = doubleStrokes.get(key[0])
 	if len(key) == 1:
-		raise KeyError
+		return spanish_mqd_single.lastValue
 	if key[1] == "*":
 		spanish_mqd_single.lastValue = ""
 		return " "
@@ -823,7 +828,7 @@ def lookup(key):
 			value = spanish_mqd_single.lastValue[:-1] + value
 	elif adjs.get(spanish_mqd_single.lastValue) is not None and value[:2] in ("sa", "si", "sí", "so"):
 		value = adjs.get(spanish_mqd_single.lastValue) + value
-	elif spanish_mqd_single.lastValue[-1] in ("e", "o", "u") and value[0] in ("a", "á"):
+	elif spanish_mqd_single.lastValue[-1] in ("e", "o", "u") and value[0] == "a":
 		value = spanish_mqd_single.lastValue + "zc" + value
 	elif spanish_mqd_single.lastValue.endswith("u") and value.startswith("t"):
 		value = spanish_mqd_single.lastValue + "c" + value

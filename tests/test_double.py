@@ -19,6 +19,10 @@ class TestDouble(unittest.TestCase):
 		self.irregular = None
 		spanish_mqd_single.lastValue = ""
 
+	def test_repeatedKey(self):
+		values = list(self.dict.values())
+		assertEqual(len(set(values)), len(values), f""Repeated values are {values - list(set(values))}")
+
 	def test_keyType(self):
 		for k, v in self.dict.items():
 			self.assertTrue(isinstance(k, str), k)
