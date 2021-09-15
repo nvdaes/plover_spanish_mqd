@@ -10,6 +10,7 @@ DICTIONARIES = [double, single]
 
 LONGEST_KEY = max(d.LONGEST_KEY for d in DICTIONARIES)
 
+
 def lookup(key):
 	for d in DICTIONARIES:
 		if len(key) > d.LONGEST_KEY:

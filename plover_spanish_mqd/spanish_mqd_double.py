@@ -808,6 +808,7 @@ irregular: MainDict = {
 	"renova": "renuev"
 }
 
+
 def lookup(key: Sequence[str]) -> Optional[str]:
 	if doubleStrokes.get(key[0]) is None:
 		raise KeyError

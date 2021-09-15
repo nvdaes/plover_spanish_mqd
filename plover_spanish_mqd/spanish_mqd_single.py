@@ -11811,4 +11811,3 @@ def lookup(key: Sequence[str]) -> Optional[str]:
 	if value.isdigit() or value.endswith(".000"):
 		return "{&" + value + "}"
 	return value + "{^}"
-
