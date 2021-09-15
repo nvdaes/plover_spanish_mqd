@@ -1,9 +1,9 @@
-from typing import Mapping, Iterable, Optional
+from typing import Dict, Tuple, Sequence, Optional
 
 
 LONGEST_KEY: int = 1
 
-numbers: Mapping[str, str] = {
+numbers: Dict[str, str] = {
 	"S": "1",
 	"P": "2",
 	"T": "3",
@@ -16,7 +16,9 @@ numbers: Mapping[str, str] = {
 	"i": "9"
 }
 
-dict: Mapping[str, Tuple[str, str]] = {
+MainDict = Dict[str, Tuple[str, str]]
+
+dict: MainDict = {
 	"a": ("", "a "),
 	"A": ("", "a"),
 	"a*": ("", "á "),
@@ -11763,21 +11765,20 @@ dict: Mapping[str, Tuple[str, str]] = {
 }
 
 
-def searchKey(dictionary: Mapping[str, Tuple[str, str]], stroke: str): -> str
-	searchKey: Iterable[str] = stroke[:]
+def searchKey(dictionary: MainDict, stroke: str) -> str:
+	searchKey: str = stroke[:]
 	searchKeyValue: str = ""
 	lenSearched: int = 0
 	value: str = ""
 	while len(searchKey) > 0:
-		if dictionary.get(searchKey) is not None:
+		try:
 			searchKeyValue = dictionary.get(searchKey)[1]
-		if searchKeyValue == "":
-			searchKey = searchKey[:len(searchKey) - 1]
-		else:
 			value += searchKeyValue
-			searchKeyValue = ""
 			lenSearched += len(searchKey)
 			searchKey = stroke[lenSearched:]
+		except Exception:
+			searchKeyValue = ""
+			searchKey = searchKey[:len(searchKey) - 1]
 	if value == "":
 		value = "{empty}"
 	return value
@@ -11785,7 +11786,7 @@ def searchKey(dictionary: Mapping[str, Tuple[str, str]], stroke: str): -> str
 
 def lookup(key: Sequence[str]): -> Optional[str]
 	value: str = ""
-    numberValue: Optional[str] = None
+	numberValue: Optional[str] = None
 	# Numbers
 	if "#" in key[0]:
 		for k in key[0]:
@@ -11800,10 +11801,11 @@ def lookup(key: Sequence[str]): -> Optional[str]
 				value = value[::-1]
 			else:
 				value = "{firstDigit}{secondDigit}".format(firstDigit=value, secondDigit=value)
-	if dict.get(key[0]) is not None:
-		value = dict.get(key[0])[0]
 	if value == "":
-		value = searchKey(dict, key[0])
+		try:
+			value = dict.get(key[0])[0]
+		except Exception:
+			value = searchKey(dict, key[0])
 	if value.endswith(" "):
 		return value
 	if value.isdigit() or value.endswith(".000"):

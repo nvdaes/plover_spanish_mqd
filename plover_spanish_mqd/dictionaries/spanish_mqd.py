@@ -4,7 +4,7 @@ from plover_spanish_mqd import (
 )
 
 
-single.lastValue = ''
+single.lastValue: str = ''
 
 DICTIONARIES = [double, single]
 

@@ -1,15 +1,17 @@
 import os
 import sys
-from typing import Tuple, Mapping, Optional, Sequence
 sys.path.append(os.path.dirname(__file__))
 import spanish_mqd_single
 del sys.path[-1]
+from typing import Tuple, Dict, Sequence, Optional
 
 LONGEST_KEY: int = 2
 
 VOWELS: Tuple[str, ...] = ("a", "á", "e", "é", "i", "í", "o", "ó", "u", "ú")
 
-doubleStrokes: Mapping[str, str] = {
+MainDict = Dict[str, Optional[str]]
+
+doubleStrokes: MainDict = {
 	"Ccn": "camina",
 	"Ccs": "categoriza",
 	"Ccsn": "aconseja",
@@ -751,7 +753,7 @@ doubleStrokes: Mapping[str, str] = {
 }
 
 
-adjs: Mapping[str, str] = {
+adjs: MainDict = {
 	"afecta": "afectuo",
 	"apena": "peno",
 	"aprovecha": "provecho",
@@ -772,7 +774,7 @@ adjs: Mapping[str, str] = {
 	"trabaja": "trabajo"
 }
 
-irregular: Mapping[str, str] = {
+irregular: MainDict = {
 	"acorda": "acuerd",
 	"alenta": "alient",
 	"aposta": "apuest",
