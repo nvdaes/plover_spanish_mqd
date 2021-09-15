@@ -1,8 +1,10 @@
 LONGEST_KEY = 1
 
+from typing import Tuple, Dict, Sequence, Optional
+
 lastValue: str = ""
 
-numbers = {
+numbers: Dict[str, str] = {
 	"S": "1",
 	"P": "2",
 	"T": "3",
@@ -15,7 +17,9 @@ numbers = {
 	"i": "9"
 }
 
-dict = {
+MainDict = Dict[str, Tuple[str, str]]
+
+dict: MainDict = {
 	"a": ("", "a "),
 	"A": ("", "a"),
 	"a*": ("", "á "),
@@ -11762,11 +11766,11 @@ dict = {
 }
 
 
-def searchKey(dictionary, stroke):
-	searchKey = stroke[:]
-	searchKeyValue = ""
-	lenSearched = 0
-	value = ""
+def searchKey(dictionary: MainDict, stroke: str) -> str:
+	searchKey: str = stroke[:]
+	searchKeyValue: str = ""
+	lenSearched: int = 0
+	value: str = ""
 	while len(searchKey) > 0:
 		if dictionary.get(searchKey) is not None:
 			searchKeyValue = dictionary.get(searchKey)[1]
@@ -11782,8 +11786,8 @@ def searchKey(dictionary, stroke):
 	return value
 
 
-def lookup(key):
-	value = ""
+def lookup(key: Sequence[str]) -> Optional[str]:
+	value: str = ""
 	# Numbers
 	if "#" in key[0]:
 		for k in key[0]:
