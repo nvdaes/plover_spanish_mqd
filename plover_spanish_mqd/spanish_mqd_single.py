@@ -1,5 +1,7 @@
 LONGEST_KEY = 1
 
+lastValue: str = ""
+
 numbers = {
 	"S": "1",
 	"P": "2",

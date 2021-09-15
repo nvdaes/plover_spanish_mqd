@@ -4,11 +4,15 @@ sys.path.append(os.path.dirname(__file__))
 import spanish_mqd_single
 del sys.path[-1]
 
-LONGEST_KEY = 2
+from typing import Tuple, Dict, Sequence, Optional
 
-VOWELS = ("a", "á", "e", "é", "i", "í", "o", "ó", "u", "ú")
+LONGEST_KEY: int = 2
 
-doubleStrokes = {
+VOWELS: Tuple[str, ...] = ("a", "á", "e", "é", "i", "í", "o", "ó", "u", "ú")
+
+MainDict = Dict[str, str]
+
+doubleStrokes: MainDict = {
 	"Ccn": "camina",
 	"Ccs": "categoriza",
 	"Ccsn": "aconseja",
@@ -750,7 +754,7 @@ doubleStrokes = {
 }
 
 
-adjs = {
+adjs: MainDict = {
 	"afecta": "afectuo",
 	"apena": "peno",
 	"aprovecha": "provecho",
@@ -771,7 +775,7 @@ adjs = {
 	"trabaja": "trabajo"
 }
 
-irregular = {
+irregular: MainDict = {
 	"acorda": "acuerd",
 	"alenta": "alient",
 	"aposta": "apuest",
@@ -804,7 +808,7 @@ irregular = {
 	"renova": "renuev"
 }
 
-def lookup(key):
+def lookup(key: Sequence[str]) -> Optional[str]:
 	if doubleStrokes.get(key[0]) is None:
 		raise KeyError
 	spanish_mqd_single.lastValue = doubleStrokes.get(key[0])
