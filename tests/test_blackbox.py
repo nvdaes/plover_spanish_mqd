@@ -49,9 +49,21 @@ class TestsBlackbox:
 		"*": "=undo",
 
 		Ccn	' camina'
+		*	''
+		Ccn' camina'
 		PTVa	' caminaba'
 		*	' camina'
 		A*	' caminá'
 		*	' camina'
 		*	''
+		'''
+
+	def test_juegue(self):
+		r'''
+		"*": "=undo",
+
+		PCT	' juga'
+		Eneo	' jueguen'
+		*	' juga'
+		O*	' jugó'
 		'''
