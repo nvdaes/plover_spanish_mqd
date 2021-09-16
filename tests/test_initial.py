@@ -47,4 +47,3 @@ class TestInitial(unittest.TestCase):
 	def test_ValueContent(self):
 		for k, v in self.dict.items():
 			self.assertFalse("//" in v, k)
-
