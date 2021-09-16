@@ -47,22 +47,27 @@ class TestsBlackbox:
 	def test_camina(self):
 		r'''
 		"*": "=undo",
+		"Ccn": "camina",
+		"A*": "á",
+		"se:" "se"
 
 		Ccn	' camina'
 		*	''
 		Ccn ' camina'
-		PTVa	' caminaba'
-		*	' camina'
 		A*	' caminá'
 		*	' camina'
-		*	''
+		Se	' caminase'
 		'''
 
 	def test_juegue(self):
 		r'''
 		"*": "=undo",
+		"SPt": "respeta",
+		"So": "so",
+		"En": "en"
 
-		SPCVR	' respeta'
+		SPt	' respeta'
 		So	' respetuoso'
 		*	' respeta'
+		En	' respeten'
 		'''
