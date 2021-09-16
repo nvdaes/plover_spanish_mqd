@@ -64,5 +64,4 @@ class TestsBlackbox:
 
 		PCTcs	' juga'
 		Eneo	' jueguen'
-		*	' juga'
 		'''
