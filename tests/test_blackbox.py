@@ -49,7 +49,7 @@ class TestsBlackbox:
 		"*": "=undo",
 		"Ccn": "camina",
 		"A*": "á",
-		"se:" "se"
+		"Se:" "se",
 
 		Ccn	' camina'
 		*	''
