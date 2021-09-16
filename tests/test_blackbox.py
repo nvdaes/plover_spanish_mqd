@@ -62,8 +62,7 @@ class TestsBlackbox:
 		r'''
 		"*": "=undo",
 
-		SPt	' respeta'
+		SPCVR	' respeta'
 		So	' respetuoso'
 		*	' respeta'
-		Eneo	' respeten'
 		'''
