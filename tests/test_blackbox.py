@@ -50,7 +50,7 @@ class TestsBlackbox:
 
 		Ccn	' camina'
 		*	''
-		Ccn' camina'
+		Ccn ' camina'
 		PTVa	' caminaba'
 		*	' camina'
 		A*	' caminá'
@@ -62,7 +62,7 @@ class TestsBlackbox:
 		r'''
 		"*": "=undo",
 
-		PCT	' juga'
+		PCTcs	' juga'
 		Eneo	' jueguen'
 		*	' juga'
 		O*	' jugó'
