@@ -64,4 +64,6 @@ class TestsBlackbox:
 
 		SPt	' respeta'
 		So	' respetuoso'
+		*	' respeta'
+		Eneo	' respeten'
 		'''
