@@ -58,16 +58,3 @@ class TestsBlackbox:
 		*	' camina'
 		Se	' caminase'
 		'''
-
-	def test_juegue(self):
-		r'''
-		"*": "=undo",
-		"SPt": "respeta",
-		"So": "so",
-		"En": "en"
-
-		SPt	' respeta'
-		So	' respetuoso'
-		*	' respeta'
-		En	' respeten'
-		'''
