@@ -1,7 +1,8 @@
-from typing import Dict, Tuple, Sequence, Optional
-
+from typing import Tuple, Dict, Sequence, Optional
 
 LONGEST_KEY: int = 1
+
+lastValue: str = ""
 
 numbers: Dict[str, str] = {
 	"S": "1",
@@ -11784,9 +11785,8 @@ def searchKey(dictionary: MainDict, stroke: str) -> str:
 	return value
 
 
-def lookup(key: Sequence[str]): -> Optional[str]
+def lookup(key: Sequence[str]) -> Optional[str]:
 	value: str = ""
-	numberValue: Optional[str] = None
 	# Numbers
 	if "#" in key[0]:
 		for k in key[0]:
@@ -11811,4 +11811,3 @@ def lookup(key: Sequence[str]): -> Optional[str]
 	if value.isdigit() or value.endswith(".000"):
 		return "{&" + value + "}"
 	return value + "{^}"
-

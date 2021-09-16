@@ -13,10 +13,6 @@ class TestSingle(unittest.TestCase):
 		self.keys = None
 		self.dict = None
 
-	def test_keyType(self):
-		for k, v in self.dict.items():
-			self.assertTrue(isinstance(k, str), k)
-
 	def test_keyOrder(self):
 		for k, v in self.dict.items():
 			prevIndex = -1
@@ -25,12 +21,3 @@ class TestSingle(unittest.TestCase):
 				curIndex = self.keys.find(char)
 				self.assertTrue(curIndex > prevIndex, k)
 				prevIndex = curIndex
-
-	def test_valueType(self):
-		for k, v in self.dict.items():
-			self.assertTrue(isinstance(v, tuple), k)
-
-	def test_valueLenght(self):
-		for k, v in self.dict.items():
-			self.assertTrue(len(v) == 2, k)
-

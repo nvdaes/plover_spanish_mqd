@@ -193,4 +193,6 @@ KEYMAPS = {
 KEYMAPS['Stentura (Italian version)'] = KEYMAPS['Stentura']
 
 DICTIONARIES_ROOT = 'asset:plover_spanish_mqd:dictionaries'
-DEFAULT_DICTIONARIES = ('user_es.json', 'punctuation.json', 'initial.json', DICTIONARIES_ROOT + '/spanish_mqd.py')
+DEFAULT_DICTIONARIES = (
+	'user_es.json', 'punctuation.json', 'initial.json', DICTIONARIES_ROOT + '/spanish_mqd.py'
+)

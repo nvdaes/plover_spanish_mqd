@@ -9,7 +9,7 @@ LONGEST_KEY: int = 2
 
 VOWELS: Tuple[str, ...] = ("a", "á", "e", "é", "i", "í", "o", "ó", "u", "ú")
 
-MainDict = Dict[str, Optional[str]]
+MainDict = Dict[str, str]
 
 doubleStrokes: MainDict = {
 	"Ccn": "camina",
@@ -807,7 +807,8 @@ irregular: MainDict = {
 	"renova": "renuev"
 }
 
-def lookup(key: Sequence[str]): -> Optional[str]
+
+def lookup(key: Sequence[str]) -> Optional[str]:
 	if doubleStrokes.get(key[0]) is None:
 		raise KeyError
 	spanish_mqd_single.lastValue = doubleStrokes.get(key[0])
@@ -819,23 +820,23 @@ def lookup(key: Sequence[str]): -> Optional[str]
 	value = spanish_mqd_single.searchKey(spanish_mqd_single.dict, key[1])
 	if spanish_mqd_single.lastValue.endswith("a") and value[0] in VOWELS:
 		if irregular.get(spanish_mqd_single.lastValue) and value in ("an ", "as ", "en ", "es "):
-			if irregular[spanish_mqd_single.lastValue].endswith("g") and value.startswith("e"):
+			if irregular[spanish_mqd_single.lastValue].endswith("g") and value.startswith("e"):  # juegue
 				value = irregular[spanish_mqd_single.lastValue] + "u" + value
-			else:
+			else:  # recuerdan
 				value = irregular[spanish_mqd_single.lastValue] + value
-		elif spanish_mqd_single.lastValue.endswith("ca") and (value[0] == "e" or value[0] == "é"):
+		elif spanish_mqd_single.lastValue.endswith("ca") and (value[0] == "e" or value[0] == "é"):  # indiqu
 			value = spanish_mqd_single.lastValue[:-2] + "qu" + value
-		elif spanish_mqd_single.lastValue.endswith("ga") and (value[0] == "e" or value[0] == "é"):
+		elif spanish_mqd_single.lastValue.endswith("ga") and (value[0] == "e" or value[0] == "é"):  # llegue, llegué
 			value = spanish_mqd_single.lastValue[:-1] + "u" + value
-		else:
+		else:  # caminan
 			value = spanish_mqd_single.lastValue[:-1] + value
-	elif adjs.get(spanish_mqd_single.lastValue) is not None and value[:2] in ("sa", "si", "sí", "so"):
+	elif adjs.get(spanish_mqd_single.lastValue) is not None and value[:2] in ("sa", "si", "sí", "so"):  # respet
 		value = adjs.get(spanish_mqd_single.lastValue) + value
-	elif spanish_mqd_single.lastValue[-1] in ("e", "o", "u") and value[0] == "a":
+	elif spanish_mqd_single.lastValue[-1] in ("e", "o", "u") and value[0] == "a":  # estable, cono, produ
 		value = spanish_mqd_single.lastValue + "zc" + value
-	elif spanish_mqd_single.lastValue.endswith("u") and value.startswith("t"):
+	elif spanish_mqd_single.lastValue.endswith("u") and value.startswith("t"):  # productiva
 		value = spanish_mqd_single.lastValue + "c" + value
-	else:
+	else:  # caminaba
 		value = spanish_mqd_single.lastValue + value
 	value = value.replace("ze", "ce")
 	value = value.replace("zé", "cé")
