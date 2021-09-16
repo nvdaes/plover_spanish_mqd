@@ -63,4 +63,5 @@ class TestsBlackbox:
 		"*": "=undo",
 
 		PCTcs	' juga'
+		Eneo	' jueguen'
 		'''
