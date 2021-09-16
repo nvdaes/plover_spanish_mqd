@@ -62,6 +62,6 @@ class TestsBlackbox:
 		r'''
 		"*": "=undo",
 
-		PCTcs	' juga'
-		Eneo	' jueguen'
+		SPt	' respeta'
+		So	' respetuoso'
 		'''
