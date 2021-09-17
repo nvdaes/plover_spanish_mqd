@@ -44,44 +44,84 @@ class TestsBlackbox:
 		registry.update()
 		system.setup('Spanish MQD')
 
-	def test_regular_verb_1(self):
+	def test_regular_1(self):
 		r'''
 		"*": "=undo",
 
-		Ccn	   ' camin'
-		PTVa-  ' caminaba'
-		*	   ' camin'
-		A*-	   ' caminá'
-		*	   ' camin'
-		E-	   ' camine'
-		*	   ' camin'
-		Eneo-  ' caminen'
-		*	   ' camin'
-		O-	   ' camino'
+		Ccn	' camin'
+		PTVa	' caminaba'
+		*	' camin'
+		A*	' caminá'
 		'''
 
-	def test_regular_verb_2(self):
+	def test_regular_2(self):
 		r'''
 		"*": "=undo",
 
-		PCVRcs	 ' lleg'
-		PTVAneo	 ' llegaban'
-		*		 ' lleg'
-		Eneo	 ' lleguen'
-		*		 ' lleg'
-		E*		 ' llegué'
+		PCVRcs	' lleg'
+		PTVAneo	' llegaban'
+		*	' lleg'
+		Eneo	' lleguen'
+		'''
+
+	def test_regular_3(self):
+		r'''
+		"*": "=undo",
+
+		Cctn	' indic'
+		PTVAneo	' indicaban'
+		*	' indic'
+		Eneo	' indiquen'
 		'''
 
 	def test_irregular_1(self):
 		r'''
 		"*": "=undo",
 
-		PCTcs  ' jueg'
-		TNo	   ' jugado'
-		*	   ' jueg'
-		Eneo   ' jueguen'
-		*	   ' jueg'
-		E*	   ' jugué'
-			  *		 ' jueg'
-		Astpo  ' jugando'
+		PCTcs	' jueg'
+		TNo	' jugado'
+		*	' jueg'
+		Eneo	' jueguen'
+		'''
+
+	def test_irregular_2(self):
+		r'''
+		"*": "=undo",
+
+		CNVRctn	' recuerd'
+		TNo	' recordado'
+		*	' recuerd'
+		Esnreo	' recordemos'
+		*	' recuerd'
+		Eneo	' recuerden'
+		'''
+
+	def test_irregular_3(self):
+		r'''
+		"*": "=undo",
+
+		CNc	' chic'
+		A*	' conozcá'
+		*	' chic'
+		CItna	' conocida'
+		'''
+
+	def test_irregular_4(self):
+		r'''
+		"*": "=undo",
+
+		PRc	' produc'
+		A*	' produzcá'
+		*	' produc'
+		Tcta	' productiva'
+		'''
+
+	def test_adj(self):
+		r'''
+		"*": "=undo",
+		
+		PCRn	' gener'
+		SI	' generosi'
+		*	 ' gener'
+		PTVa	' generaba'
 		'''
