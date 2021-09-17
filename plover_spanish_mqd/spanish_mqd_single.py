@@ -11766,27 +11766,28 @@ dict: MainDict = {
 }
 
 
-def searchKey(dictionary: MainDict, stroke: str) -> str:
-	searchKey: str = stroke[:]
-	searchKeyValue: str = ""
-	lenSearched: int = 0
-	value: str = ""
+def searchKey(dictionary, stroke):
+	searchKey = stroke[:]
+	searchKeyValue = ""
+	lenSearched = 0
+	value = ""
 	while len(searchKey) > 0:
-		try:
+		if dictionary.get(searchKey) is not None:
 			searchKeyValue = dictionary.get(searchKey)[1]
+		if searchKeyValue == "":
+			searchKey = searchKey[:len(searchKey) - 1]
+		else:
 			value += searchKeyValue
+			searchKeyValue = ""
 			lenSearched += len(searchKey)
 			searchKey = stroke[lenSearched:]
-		except Exception:
-			searchKeyValue = ""
-			searchKey = searchKey[:len(searchKey) - 1]
 	if value == "":
 		value = "{empty}"
 	return value
 
 
-def lookup(key: Sequence[str]) -> Optional[str]:
-	value: str = ""
+def lookup(key):
+	value = ""
 	# Numbers
 	if "#" in key[0]:
 		for k in key[0]:
@@ -11801,11 +11802,10 @@ def lookup(key: Sequence[str]) -> Optional[str]:
 				value = value[::-1]
 			else:
 				value = "{firstDigit}{secondDigit}".format(firstDigit=value, secondDigit=value)
+	if dict.get(key[0]) is not None:
+		value = dict.get(key[0])[0]
 	if value == "":
-		try:
-			value = dict.get(key[0])[0]
-		except Exception:
-			value = searchKey(dict, key[0])
+		value = searchKey(dict, key[0])
 	if value.endswith(" "):
 		return value
 	if value.isdigit() or value.endswith(".000"):
