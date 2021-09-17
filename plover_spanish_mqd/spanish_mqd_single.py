@@ -1,8 +1,8 @@
 from typing import Tuple, Dict
 
-LONGEST_KEY: int = 1
+LONGEST_KEY = 1
 
-lastValue: str = ""
+lastValue = ""
 
 numbers: Dict[str, str] = {
 	"S": "1",
@@ -2018,6 +2018,12 @@ dict: MainDict = {
 	"CVceo": ("equivoques ", ""),
 	"CVcie": ("equivocación ", ""),
 	"CVcpie": ("equivocaciones ", ""),
+	"CVcn": ("", "vacun"),
+	"CVcn*": ("vacú", ""),
+	"CVcneo": ("vacunes ", ""),
+	"CVcnie": ("vacunación ", ""),
+	"CVcnpie": ("vacunaciones ", ""),
+	"CVcnr": ("vacunar ", ""),
 	"CVcr": ("equivocar ", "equívoc"),
 	"CVcra*": ("equívoca ", ""),
 	"CVcria*": ("equívocas ", ""),
@@ -6792,6 +6798,20 @@ dict: MainDict = {
 	"SCTNRcse": ("catalogue ", "catalogué "),
 	"SCTNRcseo": ("catalogues ", ""),
 	"SCTNRcsie": ("catalogación ", ""),
+	"SCTNRcsn": ("", "inmuniz"),
+	"SCTNRcsna*": ("inmunidad ", ""),
+	"SCTNRcsn*": ("inmuní", ""),
+	"SCTNRcsnao": ("inmuno", "inmunó"),
+	"SCTNRcsnia*": ("inmunidades ", ""),
+	"SCTNRcsnie": ("inmunización ", ""),
+	"SCTNRcsnpie": ("inmunizaciones ", ""),
+	"SCTNRcsnr": ("inmunizar ", "inmunidad de grupo "),
+	"SCTNRcsnra": ("inmunitaria ", "inmunodeprimida "),
+	"SCTNRcsnre*": ("", "inmune "),
+	"SCTNRcsnreo": ("inmunitarios ", "inmunodeprimidos "),
+	"SCTNRcsnria": ("inmunitarias ", "inmunodeprimidas "),
+	"SCTNRcsnrie": ("inmunizarse ", "inmunes "),
+	"SCTNRcsnro": ("inmunitario ", "inmunodeprimido "),
 	"SCTNRcspie": ("catalogaciones ", ""),
 	"SCTNRcsr": ("catalogar ", "catalogador"),
 	"SCTNRcsr*": ("decálogo ", ""),

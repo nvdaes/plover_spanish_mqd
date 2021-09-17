@@ -1,7 +1,7 @@
-from .import spanish_mqd_single
 from typing import Tuple, Dict
+from . import spanish_mqd_single
 
-LONGEST_KEY: int = 2
+LONGEST_KEY = 2
 
 VOWELS: Tuple[str, ...] = ("a", "á", "e", "é", "i", "í", "o", "ó", "u", "ú")
 
@@ -822,7 +822,7 @@ def lookup(key):
 				value = irregular[spanish_mqd_single.lastValue] + value
 		elif spanish_mqd_single.lastValue.endswith("ca") and (value[0] == "e" or value[0] == "é"):
 			value = spanish_mqd_single.lastValue[:-2] + "qu" + value
-		elif spanish_mqd_single.lastValue.endswith("ga") and (value[0] == "e" or value[0] == "é"):
+		elif spanish_mqd_single.lastValue.endswith("ga") and value[0] in ("e", "é"):
 			value = spanish_mqd_single.lastValue[:-1] + "u" + value
 		else:
 			value = spanish_mqd_single.lastValue[:-1] + value
