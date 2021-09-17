@@ -1,9 +1,5 @@
-import os
-import sys
-sys.path.append(os.path.dirname(__file__))
-import spanish_mqd_single
-del sys.path[-1]
-from typing import Tuple, Dict, Sequence, Optional
+from .import spanish_mqd_single
+from typing import Tuple, Dict, Optional
 
 LONGEST_KEY: int = 2
 
