@@ -44,17 +44,44 @@ class TestsBlackbox:
 		registry.update()
 		system.setup('Spanish MQD')
 
-	def test_camina(self):
+	def test_regular_verb_1(self):
 		r'''
 		"*": "=undo",
-		"Ccn": "camina",
-		"A*": "á",
-		"Se:" "se",
 
-		Ccn	' camina'
-		*	''
-		Ccn ' camina'
-		A*	' caminá'
-		*	' camina'
-		Se	' caminase'
+		Ccn	   ' camin'
+		PTVa-  ' caminaba'
+		*	   ' camin'
+		A*-	   ' caminá'
+		*	   ' camin'
+		E-	   ' camine'
+		*	   ' camin'
+		Eneo-  ' caminen'
+		*	   ' camin'
+		O-	   ' camino'
+		'''
+
+	def test_regular_verb_2(self):
+		r'''
+		"*": "=undo",
+
+		PCVRcs	 ' lleg'
+		PTVAneo	 ' llegaban'
+		*		 ' lleg'
+		Eneo	 ' lleguen'
+		*		 ' lleg'
+		E*		 ' llegué'
+		'''
+
+	def test_irregular_1(self):
+		r'''
+		"*": "=undo",
+
+		PCTcs  ' jueg'
+		TNo	   ' jugado'
+		*	   ' jueg'
+		Eneo   ' jueguen'
+		*	   ' jueg'
+		E*	   ' jugué'
+			  *		 ' jueg'
+		Astpo  ' jugando'
 		'''

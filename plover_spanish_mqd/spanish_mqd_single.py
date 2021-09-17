@@ -1,4 +1,4 @@
-from typing import Tuple, Dict, Optional
+from typing import Tuple, Dict
 
 LONGEST_KEY: int = 1
 
