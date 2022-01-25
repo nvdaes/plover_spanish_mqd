@@ -410,6 +410,7 @@ doubleStrokes: MainDict = {
 	"SCNVRtn": "madura",
 	"Scp": "saca",
 	"SCRc": "marca",
+	"SCRcsn": "sincroniza",
 	"SCRctn": "decora",
 	"SCRsn": "clama",
 	"SCRst": "incrusta",
