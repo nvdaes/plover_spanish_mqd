@@ -38,12 +38,6 @@ class TestUser(unittest.TestCase):
 		for k, v in self.dict.items():
 			self.assertTrue(isinstance(v, str), k)
 
-	def test_command(self):
-		for k, v in self.dict.items():
-			if v.startswith(":initial:"):
-				self.assertEqual(len(v.split(" | ")), 2, k)
-				self.assertFalse(r"^}" in v, k)
-
 	def test_ValueContent(self):
 		for k, v in self.dict.items():
 			self.assertFalse("//" in v, k)

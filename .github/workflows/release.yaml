@@ -23,13 +23,6 @@ jobs:
     - name: Build
       run: |
         python setup.py sdist bdist_wheel
-    - name: Create Release
-      uses: softprops/action-gh-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        prerelease: ${{ endsWith(github.ref, '-dev') }}
-        body_path: changelog.md
     - name: Publish
       env:
         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
@@ -37,4 +30,10 @@ jobs:
       run: |
         twine upload dist/*
 
-        
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        prerelease: ${{ endsWith(github.ref, '-dev') }}
+        body_path: changelog.md        
