@@ -110,9 +110,9 @@ class TestsBlackbox:
 		r'''
 		"*": "=undo",
 
-		PRc	' produc'
+		PRc	' pric'
 		A*	' produzcá'
-		*	' produc'
+		*	' pric'
 		Tcta	' productiva'
 		'''
 
