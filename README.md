@@ -9,7 +9,6 @@ Based on this [template](https://github.com/benoit-pierre/plover_template_system
 ## Dependencies ##
 
 * [Plover Python dictionary](https://github.com/benoit-pierre/plover_python_dictionary)
-* [Plover Start words](https://github.com/nvdaes/plover_start_words)
 
 ## Versioning ##
 
