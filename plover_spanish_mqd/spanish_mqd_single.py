@@ -10352,7 +10352,7 @@ dict: MainDict = {
 	"Tcstpr": ("atisbar ", ""),
 	"Tct": ("todavía ", "tiv"),
 	"Tct*": ("TV ", ""),
-	"Tcteo": ("tivos ", ""),
+	"Tcteo": ("", "tivos "),
 	"Tctie": ("tivación ", "tivamente "),
 	"Tctn": ("", "detect"),
 	"Tctn*": ("detéc", ""),
