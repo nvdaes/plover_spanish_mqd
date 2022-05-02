@@ -19,10 +19,6 @@ class TestUser(unittest.TestCase):
 		self.keys = None
 		self.dict = None
 
-	def test_keyType(self):
-		for k, v in self.dict.items():
-			self.assertTrue(isinstance(k, str), k)
-
 	def test_keyOrder(self):
 		for k, v in self.dict.items():
 			prevIndex = -1
