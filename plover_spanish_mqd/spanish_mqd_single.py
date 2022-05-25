@@ -4359,6 +4359,7 @@ dict: MainDict = {
 	"PCTVRctpie": ("elucubraciones ", ""),
 	"PCTVRctr": ("elucubrar ", ""),
 	"PCTVre": ("tribuidores ", ""),
+	"PCTVRe*": ("recepciones ", ""),
 	"PCTVReo": ("recibos ", "recepción "),
 	"PCTVRie": ("recibimiento ", ""),
 	"PCTVrie": ("tribuirse ", ""),
