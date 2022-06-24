@@ -541,7 +541,7 @@
 	"/Vtna": "bienvenida",
 	"/Vtneo": "bienvenidos",
 	"/Vtnia": "bienvenidas",
-	"/Vtno": "bienvenido"
+	"/Vtno": "bienvenido",
 	"CNRcr": "macro{^}{$}",
 	"cpe": "ante{^}{$}",
 	"cpi": "anti{^}{$}",
@@ -572,5 +572,5 @@
 	"TNEs": "des{^}{$}",
 	"TNVpr": "hiper{^}{$}",
 	"TNVRtnpr": "tiflo{^}{$}",
-	"TNVtnr": "hidro{^}{$}",
+	"TNVtnr": "hidro{^}{$}"
 }
