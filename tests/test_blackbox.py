@@ -68,9 +68,9 @@ class TestsBlackbox:
 		r'''
 		"*": "=undo",
 
-		Cctn	' indic'
+		Cctn	' indi'
 		PTVAneo	' indicaban'
-		*	' indic'
+		*	' indi'
 		Eneo	' indiquen'
 		'''
 
@@ -78,9 +78,9 @@ class TestsBlackbox:
 		r'''
 		"*": "=undo",
 
-		PCTcs	' jueg'
+		PCTcs	' ju'
 		TNo	' jugado'
-		*	' jueg'
+		*	' ju'
 		Eneo	' jueguen'
 		'''
 
@@ -88,11 +88,11 @@ class TestsBlackbox:
 		r'''
 		"*": "=undo",
 
-		CNVRctn	' recuerd'
+		CNVRctn	' rec'
 		TNo	' recordado'
-		*	' recuerd'
+		*	' rec'
 		Esnreo	' recordemos'
-		*	' recuerd'
+		*	' rec'
 		Eneo	' recuerden'
 		'''
 
@@ -100,9 +100,9 @@ class TestsBlackbox:
 		r'''
 		"*": "=undo",
 
-		CNc	' chic'
+		CNc	' cono'
 		A*	' conozcá'
-		*	' chic'
+		*	' cono'
 		CItna	' conocida'
 		'''
 
@@ -110,9 +110,9 @@ class TestsBlackbox:
 		r'''
 		"*": "=undo",
 
-		PRc	' pric'
+		PRc	' produ'
 		A*	' produzcá'
-		*	' pric'
+		*	' produ'
 		Tcta	' productiva'
 		'''
 
