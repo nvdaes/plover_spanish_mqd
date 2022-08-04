@@ -68,6 +68,16 @@ class TestsBlackbox:
 		r'''
 		"*": "=undo",
 
+		PCNct	' averig'
+		PTVAneo	' averiguaban'
+		*	' averig'
+		Eneo	' averigüen'
+		'''
+
+	def test_regular_4(self):
+		r'''
+		"*": "=undo",
+
 		Cctn	' indi'
 		PTVAneo	' indicaban'
 		*	' indi'

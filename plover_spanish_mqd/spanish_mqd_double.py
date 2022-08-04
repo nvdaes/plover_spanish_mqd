@@ -825,6 +825,8 @@ def lookup(key):
 			value = spanish_mqd_single.lastValue[:-2] + "qu" + value
 		elif spanish_mqd_single.lastValue.endswith("ga") and value[0] in ("e", "é"):
 			value = spanish_mqd_single.lastValue[:-1] + "u" + value
+		elif spanish_mqd_single.lastValue.endswith("gua") and value[0] in ("e", "é"):
+			value = spanish_mqd_single.lastValue[:-2] + "ü" + value
 		else:
 			value = spanish_mqd_single.lastValue[:-1] + value
 	elif adjs.get(spanish_mqd_single.lastValue) is not None and value[:2] in ("sa", "si", "sí", "so"):
