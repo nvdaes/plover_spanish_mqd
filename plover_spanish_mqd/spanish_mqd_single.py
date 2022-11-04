@@ -9521,6 +9521,7 @@ dict: MainDict = {
 	"SRtr*": ("inserción laboral ", ""),
 	"Ss": ("asuntos sociales ", "sísim"),
 	"Ss*": ("Asuntos Sociales ", ""),
+	"Ssa*": ("o sea ", ""),
 	"Ssao": ("sin su ", ""),
 	"Ssao*": ("ISO ", ""),
 	"Sse": ("sin ese ", ""),
