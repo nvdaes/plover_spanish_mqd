@@ -10177,6 +10177,7 @@ dict: MainDict = {
 	"STVr": ("tender ", "tendeder"),
 	"STVR*": ("atién", ""),
 	"STVRa": ("atienda ", "atencional "),
+	"STVRAneo": ("atiendan ", ""),
 	"STVRc": ("ofre", "ofrec"),
 	"STVRc*": ("ofréz", ""),
 	"STVRca": ("ofrezca ", "ofrenda "),
