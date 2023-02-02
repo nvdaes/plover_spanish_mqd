@@ -6353,6 +6353,7 @@ dict: MainDict = {
 	"SCNRcspreo": ("y ellos ", ""),
 	"SCNRcsr": ("ministra de Igualdad ", "Ministerio de Igualdad "),
 	"SCNRcsra": ("magistrada ", "magistratura "),
+	"SCNRcsrao*": ("Ministerio de Inclusión, Seguridad Social y Migraciones ", ""),
 	"SCNRcsre*": ("magistrales ", ""),
 	"SCNRcsreo": ("magistrados ", "magistral "),
 	"SCNRcsria": ("magistradas ", "magistraturas "),
