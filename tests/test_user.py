@@ -45,10 +45,9 @@ class TestUser(unittest.TestCase):
 
 	def test_duplicateKeysInSingle(self):
 		dictKeys = self.dict.keys()
-		singleDictKeys = self.singleDict.keys()
 		duplicateKeys = []
 		value = ""
-		for k, v in singleDictKeys:
+		for k, v in self.singleDict:
 			if k in dictKeys:
 				value = v[0]
 				if value == "":
