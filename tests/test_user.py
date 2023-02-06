@@ -47,7 +47,7 @@ class TestUser(unittest.TestCase):
 		dictKeys = self.dict.keys()
 		duplicateKeys = []
 		value = ""
-		for k, v in self.singleDict:
+		for k, v in self.singleDict.items():
 			if k in dictKeys:
 				value = v[0]
 				if value == "":
