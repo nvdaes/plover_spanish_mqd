@@ -47,7 +47,11 @@ class TestUser(unittest.TestCase):
 		dictKeys = self.dict.keys()
 		singleDictKeys = self.singleDict.keys()
 		duplicateKeys = []
+		value = ""
 		for k in dictKeys:
-			if k in singleDictKeys and singleDictKeys[k][0] != "":
+			if k in singleDictKeys:
+				value = singleDictKeys[k][0]
+				if value == "":
+					continue
 				duplicateKeys.append(k)
 		self.assertListEqual(duplicateKeys, [], "\rn".join(duplicateKeys))
