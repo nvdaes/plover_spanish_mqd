@@ -50,8 +50,8 @@ class TestUser(unittest.TestCase):
 		value = ""
 		for k in dictKeys:
 			if k in singleDictKeys:
-				value = singleDictKeys[k][0]
-				if value == "":
+				value = singleDictKeys[k]
+				if value[0] == "":
 					continue
 				duplicateKeys.append(k)
 		self.assertListEqual(duplicateKeys, [], "\rn".join(duplicateKeys))
