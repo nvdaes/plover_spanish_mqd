@@ -44,7 +44,10 @@ class TestUser(unittest.TestCase):
 			self.assertFalse("//" in v, k)
 
 	def test_duplicateKeysInSingle(self):
-		dictKeys = list(self.dict.keys())
+		dictKeys = self.dict.keys()
 		singleDictKeys = self.singleDict.keys()
-		dictKeys.extend(singleDictKeys)
-		self.assertEqual(len(dictKeys), len(set(dictKeys)))
+		duplicateKeys = []
+		for k in dictKeys:
+			if k in singleDictKeys:
+				duplicateKeys.append(k)
+		self.assertListEqual(duplicateKeys, [], "\rn".join(duplicateKeys))
