@@ -2657,7 +2657,6 @@ dict: MainDict = {
 	"NRre": ("alrededor del ", "alrededor de él "),
 	"NRreo": ("alrededor de los ", "alrededores "),
 	"NRrie": ("", "larse "),
-	"NRrie*": ("Lares ", ""),
 	"NRs": ("legisl", "lísim"),
 	"NRs*": ("legís", ""),
 	"NRsa*": ("legislatura ", ""),
