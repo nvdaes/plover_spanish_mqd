@@ -21,3 +21,11 @@ class TestSingle(unittest.TestCase):
 				curIndex = self.keys.find(char)
 				self.assertTrue(curIndex > prevIndex, k)
 				prevIndex = curIndex
+
+	def test_value(self):
+		keys = []
+		for k, v in self.dict.items():
+			for value in v:
+				if "\t" in value:
+					keys.append(k)
+		self.assertEqual(keys, [], "\r\n".join(keys))
