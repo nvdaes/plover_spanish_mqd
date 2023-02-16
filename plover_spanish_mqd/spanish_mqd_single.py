@@ -2306,7 +2306,7 @@ dict: MainDict = {
 	"Inrie*": ("íles ", ""),
 	"Io": ("Instituto de Mayores y Servicios Sociales ", ""),
 	"Io*": ("IMSERSO ", ""),
-	"IOt": ("Organización Internacional	 del Trabajo ", ""),
+	"IOt": ("Organización Internacional del Trabajo ", ""),
 	"IOt*": ("OIT ", ""),
 	"Ip*": ("", "íp"),
 	"Ir*": ("", "ír"),
