@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased](https://github.com/nvdaes/plover_spanish_mqd)
 - Minor improvements in dictionary contents
 
+## [2.1.7](https://github.com/nvdaes/plover_spanish_mqd/releases/tag/v2.1.7) - 2023-05-10
+
+### Changed
+- Minor improvements in dictionary contents
+
 ## [2.1.6](https://github.com/nvdaes/plover_spanish_mqd/releases/tag/v2.1.6) - 2023-02-22
 
 ### Changed
