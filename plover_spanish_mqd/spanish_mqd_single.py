@@ -6362,7 +6362,7 @@ dict: MainDict = {
 	"SCNRcsro": ("magistrado ", ""),
 	"SCNRcst": ("", "y y"),
 	"SCNRcsti": ("ministro del Interior ", "Ministerio del Interior "),
-	"SCNRcstnpr": ("ministra de Derechos Sociales y Agenda 2030 ", "Ministerio de Derechos Sociales y Agenda 2030 "),
+	"SCNRcstnpr": ("ministra de Derechos Sociales, Consumo  y Agenda 2030 ", "Ministerio de Derechos Sociales, Consumo  y Agenda 2030 "),
 	"SCNRcstnprao": ("ministro de Asuntos Exteriores, Unión Europea y Cooperación ", "Ministerio de Asuntos Exteriores, Unión Europea y Cooperación "),
 	"SCNRcstnr": ("y que ", "y qué "),
 	"SCNRcstnra": ("y que la ", "y qué la "),
