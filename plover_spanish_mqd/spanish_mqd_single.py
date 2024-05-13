@@ -2475,7 +2475,7 @@ dict: MainDict = {
 	"Nnr": ("en el ", "en l"),
 	"Nnr*": ("en él ", ""),
 	"Nnreo": ("en los ", ""),
-	"Nnri": ("on line ", ""),
+	"Nnri": ("online ", ""),
 	"Nnrie": ("no solamente ", ""),
 	"Nnro*": ("no solo ", ""),
 	"no": ("uno ", ""),
