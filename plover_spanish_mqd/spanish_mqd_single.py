@@ -2199,7 +2199,7 @@ dict: MainDict = {
 	"Enr*": ("", "él"),
 	"Enre*": ("e-learning ", ""),
 	"EO": ("", "u"),
-"eo": ("{#space}", " "),
+	"eo": ("{#space}", " "),
 	"eo*": ("", "os "),
 	"EO*": ("", "ú"),
 	"EOci": ("Unidad de Cuidados Intensivos ", ""),
