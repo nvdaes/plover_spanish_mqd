@@ -265,6 +265,7 @@ doubleStrokes: MainDict = {
 	"PCTVctp": "cambia",
 	"PCTVn": "combina",
 	"PCTVRc": "fabrica",
+	"PCTVRcs": "litiga",
 	"PCTVRct": "elucubra",
 	"PCTVRsn": "burocratiza",
 	"PCTVRstn": "coopera",
